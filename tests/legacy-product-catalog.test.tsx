@@ -49,7 +49,9 @@ describe("legacy product catalogue", () => {
 
     const grid = screen.getByRole("list", { name: "Products" })
     expect(within(grid).getAllByRole("listitem")).toHaveLength(6)
-    expect(within(grid).getAllByRole("img")).toHaveLength(6)
+    const productImages = within(grid).getAllByRole("img")
+    expect(productImages).toHaveLength(6)
+    expect(productImages.every((image) => image.getAttribute("loading") === "eager")).toBe(true)
     expect(screen.getByRole("link", { name: "Previous page" })).toHaveAttribute(
       "href",
       "/products?category=grill&sub=gas-grill",

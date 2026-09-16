@@ -18,6 +18,7 @@ export function ProductCard({ product, bareListItem = false }: { product: Produc
             src={product.image.src || "/placeholder.svg"}
             alt={resolveText(product.image.alt) || name}
             fill
+            loading="eager"
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
             className="object-contain p-4 transition-transform duration-300 ease-out group-hover:scale-[1.025]"
           />
