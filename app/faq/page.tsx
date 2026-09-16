@@ -5,15 +5,29 @@ import { Button } from "@/components/ui/button"
 import { PageHeader } from "@/components/page-header"
 import { faqItems } from "@/lib/data/faq"
 import { resolveText } from "@/lib/locale"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "FAQ",
   description: "Answers to common questions about ordering from Baihong.",
+  alternates: { canonical: "/faq" },
+  openGraph: { title: "FAQ", description: "Answers to common questions about ordering from Baihong.", url: "/faq", type: "website", images: [siteConfig.logo] },
 }
 
 export default function FaqPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${siteConfig.url}/faq#faq`,
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: resolveText(item.question),
+      acceptedAnswer: { "@type": "Answer", text: resolveText(item.answer) },
+    })),
+  }
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PageHeader
         eyebrow="Support"
         title="Frequently Asked Questions"

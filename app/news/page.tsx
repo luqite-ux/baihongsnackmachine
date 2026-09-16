@@ -3,10 +3,13 @@ import Link from "next/link"
 import { Newspaper } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { getPublishedArticles } from "@/lib/articles-db"
+import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = {
   title: "News",
   description: "Company news and updates from Xuzhou Baihong Kitchen Equipment Co., Ltd.",
+  alternates: { canonical: "/news" },
+  openGraph: { title: "News", description: "Company news and updates from Xuzhou Baihong Kitchen Equipment Co., Ltd.", url: "/news", type: "website", images: [siteConfig.logo] },
 }
 
 export const revalidate = 60

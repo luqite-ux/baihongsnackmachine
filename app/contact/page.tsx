@@ -7,6 +7,8 @@ import { siteConfig } from "@/lib/site-config"
 export const metadata: Metadata = {
   title: "Contact / Request a Quote",
   description: "Send Baihong your equipment requirement and get a quote from our team.",
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact / Request a Quote", description: "Send Baihong your equipment requirement and get a quote from our team.", url: "/contact", type: "website", images: [siteConfig.logo] },
 }
 
 interface ContactPageProps {

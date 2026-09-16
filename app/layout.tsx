@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.brand}`,
   },
   description: siteConfig.positioning,
+  alternates: { canonical: "/" },
   icons: {
     icon: "/images/brand/baihong-favicon.png",
     apple: "/images/brand/baihong-favicon.png",
@@ -26,6 +27,13 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.brand,
     type: "website",
+    images: [siteConfig.logo],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.brand} | ${siteConfig.legalNameEn}`,
+    description: siteConfig.positioning,
+    images: [siteConfig.logo],
   },
 }
 

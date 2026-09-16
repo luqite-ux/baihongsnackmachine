@@ -14,7 +14,15 @@ export async function generateMetadata({ params }: NewsDetailPageProps): Promise
   const { slug } = await params
   const article = await getArticleBySlug(slug)
   if (!article) return {}
-  return { title: article.title, description: article.excerpt || undefined }
+  const description = article.excerpt || undefined
+  const url = `/news/${article.slug}`
+  return {
+    title: article.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: article.title, description, url, type: "article", images: article.featuredImage ? [article.featuredImage] : [siteConfig.logo] },
+    twitter: { card: "summary_large_image", title: article.title, description, images: article.featuredImage ? [article.featuredImage] : [siteConfig.logo] },
+  }
 }
 
 export default async function NewsDetailPage({ params }: NewsDetailPageProps) {

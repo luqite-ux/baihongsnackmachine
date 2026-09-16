@@ -1,5 +1,14 @@
+import type { Metadata } from "next"
 import { ProductCatalog } from "@/components/product-catalog"
 import { fetchCategories, fetchProducts } from "@/lib/products-db"
+import { siteConfig } from "@/lib/site-config"
+
+export const metadata: Metadata = {
+  title: "Products",
+  description: "Browse Baihong commercial snack machines and kitchen equipment by category.",
+  alternates: { canonical: "/products" },
+  openGraph: { title: "Products", description: "Browse Baihong commercial snack machines and kitchen equipment by category.", url: "/products", type: "website", images: [siteConfig.logo] },
+}
 
 interface ProductsPageProps {
   searchParams: Promise<{ category?: string; sub?: string; page?: string }>

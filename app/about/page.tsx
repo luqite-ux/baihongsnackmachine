@@ -10,6 +10,8 @@ import { siteConfig } from "@/lib/site-config"
 export const metadata: Metadata = {
   title: "About Us",
   description: siteConfig.positioning,
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About Us", description: siteConfig.positioning, url: "/about", type: "website" },
 }
 
 export default function AboutPage() {

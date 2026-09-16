@@ -21,9 +21,15 @@ export async function generateMetadata({ params }: ProductDetailPageProps): Prom
   const product = await fetchProductBySlug(slug)
   if (!product) return {}
   const name = resolveText(product.name)
+  const description = product.summary ? resolveText(product.summary) : `${name} from ${siteConfig.brand}.`
+  const url = `/products/${product.slug}`
+  const image = product.image.src.startsWith("http") ? product.image.src : `${siteConfig.url}${product.image.src}`
   return {
     title: name,
-    description: product.summary ? resolveText(product.summary) : `${name} from ${siteConfig.brand}.`,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title: name, description, url, type: "website", images: [image] },
+    twitter: { card: "summary_large_image", title: name, description, images: [image] },
   }
 }
 
@@ -48,10 +54,20 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     brand: { "@type": "Brand", name: siteConfig.brand },
     manufacturer: { "@id": `${siteConfig.url}/#organization` },
   }
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Products", item: `${siteConfig.url}/products` },
+      ...(category ? [{ "@type": "ListItem", position: 2, name: resolveText(category.name), item: `${siteConfig.url}/products?category=${category.slug}` }] : []),
+      { "@type": "ListItem", position: category ? 3 : 2, name, item: `${siteConfig.url}/products/${product.slug}` },
+    ],
+  }
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-1.5 text-sm text-muted-foreground">
         <Link href="/products" className="hover:text-primary">
           Products
