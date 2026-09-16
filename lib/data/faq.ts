@@ -2,7 +2,7 @@ import type { FaqItem } from "@/lib/types"
 
 /**
  * Process-oriented questions only — no invented specifications, lead times,
- * certifications or guarantees. Answers point buyers back to a direct
+ * certifications or unsupported service promises. Answers point buyers back to a direct
  * inquiry so real figures always come from a person, not this page.
  */
 export const faqItems: FaqItem[] = [

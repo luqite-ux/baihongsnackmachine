@@ -10,7 +10,7 @@ export function MainNav() {
 
   return (
     <nav aria-label="Main" className="hidden md:block">
-      <ul className="flex items-center gap-6 text-sm font-medium">
+      <ul className="flex items-center gap-0 text-[13px] font-bold uppercase tracking-[0.02em]">
         {navItems.map((item) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
           return (
@@ -19,12 +19,12 @@ export function MainNav() {
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
                 className={cn(
-                  "relative py-2 text-foreground/80 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm",
-                  isActive && "text-primary",
+                  "relative block px-5 py-7 text-neutral-950 transition-colors hover:text-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f39a00]",
+                  isActive && "text-[#f39a00]",
                 )}
               >
-                {item.label}
-                {isActive && <span className="absolute inset-x-0 -bottom-[1px] h-0.5 rounded-full bg-primary" />}
+                {item.label.toUpperCase()}
+                {isActive && <span className="absolute inset-x-5 bottom-4 h-0.5 bg-[#f39a00]" />}
               </Link>
             </li>
           )

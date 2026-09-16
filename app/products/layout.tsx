@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { Suspense } from "react"
-import { PageHeader } from "@/components/page-header"
 import { CategoryNav } from "@/components/products/category-nav"
 import { ProductGridSkeleton } from "@/components/products/product-grid-skeleton"
+import { ProductDisplayHero } from "@/components/products/product-display-hero"
 import { fetchCategories } from "@/lib/products-db"
 
 export const metadata: Metadata = {
@@ -20,15 +20,18 @@ export default async function ProductsLayout({ children }: { children: React.Rea
   const categories = await fetchCategories()
   return (
     <>
-      <PageHeader
-        eyebrow="Product Catalog"
-        title="Products"
-        description="Browse Baihong commercial snack machines and kitchen equipment by category. Contact us for pricing and customization."
-      />
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-[240px_1fr]">
-          <aside className="md:sticky md:top-24 md:self-start">
-            <Suspense fallback={<div className="h-64 rounded-md bg-muted/40" aria-hidden="true" />}>
+      <ProductDisplayHero />
+      <div className="mx-auto max-w-[1200px] px-4 py-12 lg:px-0">
+        <div className="mb-8">
+          <h2 className="text-3xl font-black text-neutral-950">Main Product Category</h2>
+          <p className="mt-3 max-w-5xl text-sm leading-6 text-neutral-600">
+            Our main products include barbecue grills, aluminum plate machines, deep fryers and commercial snack
+            machines. Select a category to update the product list on the right.
+          </p>
+        </div>
+        <div className="grid gap-7 md:grid-cols-[255px_1fr]">
+          <aside className="md:sticky md:top-4 md:self-start">
+            <Suspense fallback={<div className="h-64 bg-neutral-100" aria-hidden="true" />}>
               <CategoryNav categories={categories} />
             </Suspense>
           </aside>

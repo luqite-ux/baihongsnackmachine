@@ -21,14 +21,15 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
         onClick={() => setOpen((v) => !v)}
+        className="rounded-none text-neutral-950 hover:bg-[#f39a00] hover:text-white"
       >
-        {open ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
+        {open ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
       </Button>
 
       {open && (
         <div
           id="mobile-nav-panel"
-          className="fixed inset-x-0 top-[57px] z-40 border-b border-border bg-background shadow-lg"
+          className="absolute inset-x-0 top-full z-40 border-b border-neutral-200 bg-white shadow-lg"
         >
           <nav aria-label="Mobile" className="flex flex-col px-4 py-3">
             {navItems.map((item) => {
@@ -40,8 +41,8 @@ export function MobileNav() {
                   onClick={() => setOpen(false)}
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    "rounded-md px-3 py-3 text-base font-medium text-foreground/80 hover:bg-muted hover:text-primary",
-                    isActive && "bg-muted text-primary",
+                    "border-b border-neutral-100 px-3 py-3 text-sm font-bold uppercase text-neutral-800 hover:bg-neutral-100 hover:text-[#f39a00]",
+                    isActive && "text-[#f39a00]",
                   )}
                 >
                   {item.label}
@@ -51,7 +52,7 @@ export function MobileNav() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-md bg-primary px-3 py-3 text-center text-base font-semibold text-primary-foreground"
+              className="mt-3 bg-[#f39a00] px-3 py-3 text-center text-sm font-bold uppercase text-white"
             >
               Request a Quote
             </Link>

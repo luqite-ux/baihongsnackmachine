@@ -1,40 +1,36 @@
-import { ClipboardList, Factory, PackageCheck } from "lucide-react"
-import { ProcessTrace } from "@/components/motion/process-trace"
+import { Building2, Factory, PackageCheck, Wrench } from "lucide-react"
 import { Reveal } from "@/components/motion/reveal"
 
 const steps = [
-  { icon: ClipboardList, title: "Design", body: "Equipment is designed for commercial snack and food-service use." },
-  { icon: Factory, title: "Production", body: "Machines are produced in-house at our Xuzhou facility." },
-  { icon: PackageCheck, title: "Processing", body: "Units are processed and prepared for dispatch to buyers." },
+  { icon: Building2, title: "6000 m²", body: "Published factory area" },
+  { icon: Factory, title: "3", body: "Production workshops" },
+  { icon: Wrench, title: "6", body: "Production lines" },
+  { icon: PackageCheck, title: "30000", body: "Published monthly capacity" },
 ]
 
 export function CapabilitySection() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <Reveal>
-        <p className="text-sm font-semibold uppercase tracking-wide text-primary">Capability</p>
-        <h2 className="mt-2 text-2xl font-bold text-foreground sm:text-3xl">
-          Design, Production &amp; Processing In-House
-        </h2>
+    <section className="bg-neutral-950 py-14 text-white">
+      <div className="mx-auto max-w-[1200px] px-4 lg:px-0">
+      <Reveal className="text-center">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#f39a00]">Manufacturing</p>
+        <h2 className="mt-2 text-3xl font-black">Business Advantages</h2>
       </Reveal>
 
-      <div className="mt-10 grid gap-8 sm:grid-cols-3">
+      <div className="mt-10 grid grid-cols-2 gap-px bg-white/15 md:grid-cols-4">
         {steps.map((step, i) => (
           <Reveal key={step.title} delay={i * 100}>
-            <div className="flex flex-col gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <step.icon className="h-5 w-5" aria-hidden="true" />
+            <div className="flex min-h-40 flex-col items-center justify-center gap-3 bg-neutral-950 px-4 text-center">
+              <span className="flex h-11 w-11 items-center justify-center border border-[#f39a00] text-[#f39a00]">
+                <step.icon className="h-6 w-6" aria-hidden="true" />
               </span>
-              <h3 className="font-semibold text-foreground">{step.title}</h3>
-              <p className="text-sm text-muted-foreground">{step.body}</p>
+              <h3 className="text-2xl font-black">{step.title}</h3>
+              <p className="text-xs uppercase tracking-wide text-white/70">{step.body}</p>
             </div>
           </Reveal>
         ))}
       </div>
-
-      <Reveal delay={250} className="mt-10 flex justify-center">
-        <ProcessTrace />
-      </Reveal>
+      </div>
     </section>
   )
 }

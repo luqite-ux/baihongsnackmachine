@@ -30,18 +30,18 @@ export function ProductCatalog({
       key={`${category ?? "all"}-${sub ?? "all"}-${data.page}`}
       className="animate-in fade-in slide-in-from-bottom-2 duration-200"
     >
-      <div role="status" aria-live="polite" className="mb-4 text-sm text-muted-foreground">
+      <div role="status" aria-live="polite" className="mb-4 border-b border-neutral-200 pb-3 text-sm text-neutral-500">
         {activeCategory ? `${resolveText(activeCategory.name)}: ` : ""}
         Showing {data.items.length} of {data.total} product{data.total === 1 ? "" : "s"}
       </div>
 
       {data.items.length === 0 ? (
-        <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border bg-secondary/30 py-16 text-center">
+        <div className="flex flex-col items-center gap-3 border border-dashed border-neutral-300 bg-neutral-50 py-16 text-center">
           <PackageSearch className="h-8 w-8 text-muted-foreground" aria-hidden="true" />
           <p className="text-sm text-muted-foreground">No products found in this category yet.</p>
         </div>
       ) : (
-        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+        <ul aria-label="Products" className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {data.items.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}

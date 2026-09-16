@@ -1,10 +1,8 @@
 "use client"
 
 import Image from "next/image"
-import Link from "next/link"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 export interface BannerSlide {
@@ -16,6 +14,7 @@ export interface BannerSlide {
   eyebrow: string
   title: string
   body: string
+  bullets: string[]
   ctaLabel: string
   ctaHref: string
 }
@@ -69,7 +68,8 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
         touchStartX.current = null
       }}
     >
-      <div className="relative h-[420px] sm:h-[480px] md:h-[560px] lg:h-[620px]">
+      <h1 className="sr-only">Commercial snack machine manufacturer</h1>
+      <div className="relative h-[250px] sm:h-[320px] md:h-auto md:aspect-[12/5]">
         {slides.map((slide, i) => (
           <div
             key={slide.id}
@@ -88,7 +88,7 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
               fill
               priority={i === 0}
               sizes="100vw"
-              className="object-cover max-sm:[object-position:var(--mobile-pos)] sm:[object-position:var(--desktop-pos)]"
+              className="object-contain md:object-cover max-sm:[object-position:var(--mobile-pos)] sm:[object-position:var(--desktop-pos)]"
               style={
                 {
                   "--mobile-pos": slide.mobileFocalPosition,
@@ -96,33 +96,49 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
                 } as React.CSSProperties
               }
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/80 via-neutral-950/40 to-transparent" />
-            <div className="relative mx-auto flex h-full max-w-7xl items-center px-4 sm:px-6 lg:px-8">
-              <div className="max-w-lg text-white">
-                <p className="text-sm font-semibold uppercase tracking-wide text-accent-foreground/90 text-orange-400">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent md:from-black/75 md:via-black/20" />
+            <div className="relative z-10 mx-auto flex h-full max-w-[1200px] items-center px-8 sm:px-14 lg:px-0">
+              <div className="max-w-[48%] text-white sm:max-w-[520px]">
+                <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#f39a00] sm:text-sm">
                   {slide.eyebrow}
                 </p>
-                <h1 className="mt-2 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl">{slide.title}</h1>
-                <p className="mt-3 text-sm text-white/85 sm:text-base">{slide.body}</p>
-                <Button asChild size="lg" className="mt-6">
-                  <Link href={slide.ctaHref}>{slide.ctaLabel}</Link>
-                </Button>
+                <h2 className="text-xl font-black uppercase leading-[1.05] sm:text-3xl md:text-5xl">
+                  {slide.title}
+                </h2>
+                <p className="mt-4 hidden max-w-[500px] text-sm leading-6 text-white/85 sm:block md:text-base">
+                  {slide.body}
+                </p>
+                <ul className="mt-5 hidden grid-cols-2 gap-x-6 gap-y-2 text-sm font-semibold sm:grid">
+                  {slide.bullets.map((bullet) => (
+                    <li key={bullet} className="flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 shrink-0 bg-[#f39a00]" aria-hidden="true" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="absolute inset-x-0 bottom-4 flex items-center justify-center gap-4">
-        <Button
-          variant="secondary"
-          size="icon"
-          className="hidden sm:inline-flex"
+      <button
+          type="button"
+          className="absolute left-3 top-1/2 hidden h-12 w-8 -translate-y-1/2 items-center justify-center bg-black/35 text-white hover:bg-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:flex"
           aria-label="Previous slide"
           onClick={() => goTo(index - 1)}
         >
-          <ChevronLeft className="h-4 w-4" aria-hidden="true" />
-        </Button>
+          <ChevronLeft className="h-6 w-6" aria-hidden="true" />
+      </button>
+      <button
+          type="button"
+          className="absolute right-3 top-1/2 hidden h-12 w-8 -translate-y-1/2 items-center justify-center bg-black/35 text-white hover:bg-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:flex"
+          aria-label="Next slide"
+          onClick={() => goTo(index + 1)}
+        >
+          <ChevronRight className="h-6 w-6" aria-hidden="true" />
+      </button>
+      <div className="absolute inset-x-0 bottom-3 flex justify-center">
         <div className="flex gap-2" role="tablist" aria-label="Slides">
           {slides.map((slide, i) => (
             <button
@@ -133,21 +149,12 @@ export function BannerCarousel({ slides }: { slides: BannerSlide[] }) {
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => goTo(i)}
               className={cn(
-                "h-2.5 w-2.5 rounded-full ring-1 ring-white/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white",
-                i === index ? "w-6 bg-white" : "bg-white/30",
+                "h-2.5 w-2.5 border border-white bg-black/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white",
+                i === index ? "bg-[#f39a00]" : "hover:bg-white/70",
               )}
             />
           ))}
         </div>
-        <Button
-          variant="secondary"
-          size="icon"
-          className="hidden sm:inline-flex"
-          aria-label="Next slide"
-          onClick={() => goTo(index + 1)}
-        >
-          <ChevronRight className="h-4 w-4" aria-hidden="true" />
-        </Button>
       </div>
     </section>
   )

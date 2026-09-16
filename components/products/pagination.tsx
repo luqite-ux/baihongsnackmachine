@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 function buildHref(params: Record<string, string | undefined>, page: number) {
@@ -27,21 +26,21 @@ export function ProductPagination({
   const params = { category, sub }
 
   return (
-    <nav aria-label="Product pages" className="mt-8 flex items-center justify-center gap-1.5">
+    <nav aria-label="Product pages" className="mt-9 flex items-center justify-center gap-2">
       <Link
         href={buildHref(params, Math.max(1, page - 1))}
         aria-disabled={page === 1}
         aria-label="Previous page"
         className={cn(
-          "flex h-9 w-9 items-center justify-center rounded-md border border-border text-sm transition-colors hover:bg-secondary",
+          "flex h-9 min-w-16 items-center justify-center border border-neutral-200 px-3 text-sm text-neutral-600 transition-colors hover:border-[#f39a00] hover:bg-[#f39a00] hover:text-white",
           page === 1 && "pointer-events-none opacity-40",
         )}
       >
-        <ChevronLeft className="h-4 w-4" aria-hidden="true" />
+        Prev
       </Link>
 
-      <span aria-current="page" className="flex h-9 min-w-9 items-center justify-center rounded-md border border-primary bg-primary px-3 text-sm font-medium text-primary-foreground">
-        {page} / {totalPages}
+      <span aria-current="page" className="flex h-9 min-w-9 items-center justify-center border border-[#f39a00] bg-[#f39a00] px-3 text-sm font-bold text-white">
+        {page}
       </span>
 
       <Link
@@ -49,11 +48,11 @@ export function ProductPagination({
         aria-disabled={page === totalPages}
         aria-label="Next page"
         className={cn(
-          "flex h-9 w-9 items-center justify-center rounded-md border border-border text-sm transition-colors hover:bg-secondary",
+          "flex h-9 min-w-16 items-center justify-center border border-neutral-200 px-3 text-sm text-neutral-600 transition-colors hover:border-[#f39a00] hover:bg-[#f39a00] hover:text-white",
           page === totalPages && "pointer-events-none opacity-40",
         )}
       >
-        <ChevronRight className="h-4 w-4" aria-hidden="true" />
+        Next
       </Link>
     </nav>
   )
