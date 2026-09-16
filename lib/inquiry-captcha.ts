@@ -28,12 +28,13 @@ const shapes: Record<string, string> = {
 
 function svg(answer: string, nonce: string) {
   const seed = Buffer.from(nonce, "base64url")
+  const byte = (index: number) => seed[index % seed.length]
   const glyphs = [...answer].map((digit, index) => {
     const paths = [...segments[digit]].map((segment) => `<path d="${shapes[segment]}"/>`).join("")
-    const rotate = (seed[index] % 9) - 4
+    const rotate = (byte(index) % 9) - 4
     return `<g transform="translate(${12 + index * 36} 5) rotate(${rotate} 13 23)">${paths}</g>`
   }).join("")
-  const noise = [0, 1, 2].map((index) => `<path d="M2 ${10 + seed[index + 5] % 35} C45 ${seed[index + 8] % 50},115 ${seed[index + 11] % 50},158 ${8 + seed[index + 14] % 38}"/>`).join("")
+  const noise = [0, 1, 2].map((index) => `<path d="M2 ${10 + byte(index + 5) % 35} C45 ${byte(index + 8) % 50},115 ${byte(index + 11) % 50},158 ${8 + byte(index + 14) % 38}"/>`).join("")
   return `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="56" viewBox="0 0 160 56" role="img" aria-label="Four character verification image"><rect width="160" height="56" rx="8" fill="#f8fafc"/><g fill="none" stroke="#94a3b8" opacity=".55">${noise}</g><g fill="#0f172a">${glyphs}</g></svg>`
 }
 

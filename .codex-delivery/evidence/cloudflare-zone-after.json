@@ -1,0 +1,77 @@
+{
+  "zone": {
+    "id": "008f595e5f3b38adf64e971dc3d3285e",
+    "name": "baihongsnackmachine.com",
+    "status": "pending",
+    "name_servers": [
+      "eleanor.ns.cloudflare.com",
+      "sterling.ns.cloudflare.com"
+    ]
+  },
+  "records": [
+    {
+      "id": "40536a8ed553163a2f1bda064e576352",
+      "name": "baihongsnackmachine.com",
+      "type": "A",
+      "content": "76.76.21.21",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-09-16T11:22:51.591627Z",
+      "modified_on": "2026-09-16T11:22:51.591627Z"
+    },
+    {
+      "id": "ef347f7f7231eb8ad234a2a31c78a941",
+      "name": "www.baihongsnackmachine.com",
+      "type": "CNAME",
+      "content": "cname.vercel-dns.com",
+      "proxiable": true,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {
+        "flatten_cname": false
+      },
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-09-16T11:22:51.925391Z",
+      "modified_on": "2026-09-16T11:23:26.986409Z"
+    },
+    {
+      "id": "199e930a8f4f69bd0f8537dcc3a20723",
+      "name": "baihongsnackmachine.com",
+      "type": "MX",
+      "content": "mx1.forwardemail.net",
+      "priority": 10,
+      "proxiable": false,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-09-16T11:22:51.261271Z",
+      "modified_on": "2026-09-16T11:22:51.261271Z"
+    },
+    {
+      "id": "d214456d36540be80835ec5528714744",
+      "name": "baihongsnackmachine.com",
+      "type": "MX",
+      "content": "mx2.forwardemail.net",
+      "priority": 10,
+      "proxiable": false,
+      "proxied": false,
+      "ttl": 1,
+      "settings": {},
+      "meta": {},
+      "comment": null,
+      "tags": [],
+      "created_on": "2026-09-16T11:22:50.970016Z",
+      "modified_on": "2026-09-16T11:22:50.970016Z"
+    }
+  ]
+}

@@ -411,6 +411,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "faithful",
+          "semantic_evidence": "The authoritative Chinese legal name is stored in backend display_name while the English public site faithfully renders the verified published English legal name.",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/about (source-derived company identity; English public view uses the verified published English legal name)",
+          "evidence": "Production HTML/data rendering and interaction implementation verified.",
+          "verification_mode": "faithful",
+          "semantic_evidence": "The authoritative Chinese legal name is stored in backend display_name while the English public site faithfully renders the verified published English legal name.",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -429,6 +447,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "1479b377b0a4e411d7c33adfffd5908d05d3f6b5dfb4953b86d65eb4b13bfd5b",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/about and shared footer",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "1479b377b0a4e411d7c33adfffd5908d05d3f6b5dfb4953b86d65eb4b13bfd5b",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -447,6 +483,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "f3f7d4e732b4b0e84071345c62c273c86efbbe6043e5156df23308742befd174",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/ header and footer",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "f3f7d4e732b4b0e84071345c62c273c86efbbe6043e5156df23308742befd174",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -465,6 +519,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "295ab2d94410f404773681d1833da370a1b7367ef8888bfd0fb03cd48ca4e9e6",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/ metadata canonical configuration",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "295ab2d94410f404773681d1833da370a1b7367ef8888bfd0fb03cd48ca4e9e6",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -483,6 +555,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "a6407f4d4b263a42c44dbff98340e5706f49e370916b34fe36ee367b96d16421",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/contact",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "a6407f4d4b263a42c44dbff98340e5706f49e370916b34fe36ee367b96d16421",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -501,6 +591,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "db2bd7b41e0fab9aa1ea7a46a6c78fdab329b1c0a8c7ddc3b29c60ea453e20fe",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/contact",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "db2bd7b41e0fab9aa1ea7a46a6c78fdab329b1c0a8c7ddc3b29c60ea453e20fe",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -519,6 +627,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "121c7f2781ccc236c2b3758aec4f8965edc0d1022f7a79bd833db2522c52a46c",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/contact",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "121c7f2781ccc236c2b3758aec4f8965edc0d1022f7a79bd833db2522c52a46c",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -537,6 +663,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "ee62de25ccc2b55d3a0495244b246fb97055b6f1c2697d837b8e94976c03756f",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/products",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "ee62de25ccc2b55d3a0495244b246fb97055b6f1c2697d837b8e94976c03756f",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -554,6 +698,16 @@
       ],
       "expected_destinations": [
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/products?page=47",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "31489056e0916d59fe3add79e63f095af3ffb81604691f21cad442a85c7be617",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -571,6 +725,16 @@
       ],
       "expected_destinations": [
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/ homepage hero slide 1",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "d226c93128a5db722ffc11e482d7596ac5c14c6599297a8524de428e203fef19",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -588,6 +752,16 @@
       ],
       "expected_destinations": [
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/ homepage hero slide 2",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "f0964e3dfd4e60f82638a5769c69782dc8022555705d562dde1bae1453e0e515",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -605,6 +779,16 @@
       ],
       "expected_destinations": [
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/ homepage hero slide 3",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "b456a4f906ee461a0c263441681e15ebfbca26d01689fe5c115baf6e1d3fb5ba",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -623,6 +807,24 @@
       "expected_destinations": [
         "backend",
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "backend",
+          "locator": "Supabase tenant 373be627-6f4f-4058-9147-483dacb60de6 / tenants, product_categories and products",
+          "evidence": "Tenant/database readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "1ba16b8a931229af68cee577118c297233d3d92c337ee6322435f1fd5d18249f",
+          "verification_result": "PASS"
+        },
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/ header, footer and favicon",
+          "evidence": "Production rendering/readback completed.",
+          "verification_mode": "exact",
+          "value_hash": "1ba16b8a931229af68cee577118c297233d3d92c337ee6322435f1fd5d18249f",
+          "verification_result": "PASS"
+        }
       ]
     },
     {
@@ -640,6 +842,16 @@
       ],
       "expected_destinations": [
         "frontend"
+      ],
+      "terminal_targets": [
+        {
+          "layer": "frontend",
+          "locator": "https://baihongsnackmachine-4goir4ahl-huanqiu.vercel.app/products desktop category and pagination interaction",
+          "evidence": "Production HTML/data rendering and interaction implementation verified.",
+          "verification_mode": "faithful",
+          "semantic_evidence": "Desktop category and pagination changes replace only the right product-grid segment while the left category navigation remains mounted; mobile uses a collapsible category control.",
+          "verification_result": "PASS"
+        }
       ]
     }
   ]

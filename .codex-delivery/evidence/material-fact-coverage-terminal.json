@@ -1,0 +1,22 @@
+{
+  "issue_id": "DATA-MATERIAL-FACT-COVERAGE",
+  "phase": "terminal",
+  "pass": true,
+  "unregistered_source_paths": [],
+  "invalid_source_ids": [],
+  "unreadable_source_ids": [],
+  "invalid_unit_ids": [],
+  "invalid_fact_ids": [],
+  "unaccounted_unit_ids": [],
+  "unaccounted_fact_ids": [],
+  "missing_destination_fact_ids": [],
+  "invalid_target_fact_ids": [],
+  "value_mismatch_fact_ids": [],
+  "counts": {
+    "discovered_file_count": 34,
+    "registered_source_count": 34,
+    "extraction_unit_count": 14,
+    "fact_count": 14,
+    "verified_destination_count": 23
+  }
+}
