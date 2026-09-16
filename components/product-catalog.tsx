@@ -1,0 +1,54 @@
+import { PackageSearch } from "lucide-react"
+import { ProductCard } from "@/components/product-card"
+import { ProductPagination } from "@/components/products/pagination"
+import type { ProductPage } from "@/lib/products-db"
+import type { ProductCategory } from "@/lib/types"
+import { resolveText } from "@/lib/locale"
+
+/**
+ * Right-hand catalog segment (MOT-BAIHONG-02). This is composed inside the
+ * Suspense boundary rendered by app/products/page.tsx, while the left
+ * `CategoryNav` lives one level up in app/products/layout.tsx and never
+ * remounts. Rendering `ProductPagination` and `ProductCard` here keeps the
+ * grid, the "showing N of total" status and the pager updating together as
+ * a single unit whenever category, subcategory or page changes, with no
+ * effect on the stable shell around it.
+ */
+export function ProductCatalog({
+  data,
+  activeCategory,
+  category,
+  sub,
+}: {
+  data: ProductPage
+  activeCategory?: ProductCategory
+  category?: string
+  sub?: string
+}) {
+  return (
+    <div
+      key={`${category ?? "all"}-${sub ?? "all"}-${data.page}`}
+      className="animate-in fade-in slide-in-from-bottom-2 duration-200"
+    >
+      <div role="status" aria-live="polite" className="mb-4 text-sm text-muted-foreground">
+        {activeCategory ? `${resolveText(activeCategory.name)}: ` : ""}
+        Showing {data.items.length} of {data.total} product{data.total === 1 ? "" : "s"}
+      </div>
+
+      {data.items.length === 0 ? (
+        <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border bg-secondary/30 py-16 text-center">
+          <PackageSearch className="h-8 w-8 text-muted-foreground" aria-hidden="true" />
+          <p className="text-sm text-muted-foreground">No products found in this category yet.</p>
+        </div>
+      ) : (
+        <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {data.items.map((product) => (
+            <ProductCard key={product.slug} product={product} />
+          ))}
+        </ul>
+      )}
+
+      <ProductPagination page={data.page} totalPages={data.totalPages} category={category} sub={sub} />
+    </div>
+  )
+}

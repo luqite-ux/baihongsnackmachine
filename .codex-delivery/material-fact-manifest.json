@@ -1,0 +1,646 @@
+{
+  "material_roots": [
+    "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials"
+  ],
+  "sources": [
+    {
+      "source_id": "asset-ledger",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\asset-ledger.md",
+      "type": "markdown",
+      "fingerprint": "a01e09fb212b98e3cae2a860c0acf00670e3dbeedbdee9a03a3abf891bf15191",
+      "decision": "extract",
+      "extraction_evidence": "Human-readable provenance ledger; atomic asset facts are normalized through the requirements units and machine-readable published asset manifest.",
+      "no_fact_reason": "No additional atomic fact beyond the normalized requirement and asset manifest records.",
+      "units": []
+    },
+    {
+      "source_id": "published-assets-manifest",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets-manifest.json",
+      "type": "json",
+      "fingerprint": "76d3284662a6ac13184c955c2f4c0b6a5f7b222204c28c2d080f7fd89b5c726f",
+      "decision": "extract",
+      "extraction_evidence": "Machine-readable URL, dimensions, byte size and SHA-256 inventory for every downloaded public asset.",
+      "no_fact_reason": "Asset provenance is consumed by the separate asset ledger and product-media mapping; no duplicate business facts are created here.",
+      "units": []
+    },
+    {
+      "source_id": "asset-174184178.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184178.jpg",
+      "type": "jpg",
+      "fingerprint": "893fed1670058f15cc72e511a194d6d0ab27dca977f737b36b90b0d0b6f0d57e",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174184179.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184179.jpg",
+      "type": "jpg",
+      "fingerprint": "a76288e2125f886572a04f6806060c4425c9265b2ff2b2b7215bed17e1845c81",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174184180.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184180.jpg",
+      "type": "jpg",
+      "fingerprint": "f333929386f38df0c17da2ad45c18bcfcf58a67e2971753fb419b2d49c6d7b60",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174184181.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184181.jpg",
+      "type": "jpg",
+      "fingerprint": "7c6d9fddf98f85502664d0c4a3edef91b4da0864ca193bdc96e0015c9a5f8352",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174184182.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184182.jpg",
+      "type": "jpg",
+      "fingerprint": "cfa79e76df283df493cbcd6d0ec9e46b24543cb64b6b9b5294eea606ee6f00e1",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174184183.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184183.jpg",
+      "type": "jpg",
+      "fingerprint": "2e3958b40fa6a8c26771befd74e154b101e6f8dd9a37d691b6172f403524a486",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174184857.png",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174184857.png",
+      "type": "png",
+      "fingerprint": "a9fac46de25dfeaa8c65f51fedb345d54db58c6532ded27fe94b06e5d9f3fdfe",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185365.png",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185365.png",
+      "type": "png",
+      "fingerprint": "932b7e5348a461f835b7f5418fa2e5a13ae7906b62237818473244aaeaa2729f",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185436.png",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185436.png",
+      "type": "png",
+      "fingerprint": "9e83edd067bb2a411da92b6071e4efffeccc60986b73f64f737e29daebfe288c",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185437.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185437.jpg",
+      "type": "jpg",
+      "fingerprint": "0e5829c5609e5235670a21e2e862a80857292f2b75083e7360c4bd619cd41ba1",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185439.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185439.jpg",
+      "type": "jpg",
+      "fingerprint": "63d15ae9a07034fdcec8a2cb4fb637ac07b0a42d4b5d02cd17c217a78710ba72",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185440.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185440.jpg",
+      "type": "jpg",
+      "fingerprint": "5f3033ee337e19e8ba88f3bb5401ce260f42bcc0b5751863bf5db6f877bebb33",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185442.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185442.jpg",
+      "type": "jpg",
+      "fingerprint": "d8b04ae2a8113f94dc415e641e7d0f8ff4af3e376af502f1cc720ede7125b5e1",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185444.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185444.jpg",
+      "type": "jpg",
+      "fingerprint": "5552e6727e2c68a6ada01e85105013a7e1a84e85a1843b98caaeb4e723c8ce26",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185445.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185445.jpg",
+      "type": "jpg",
+      "fingerprint": "45a457ac3da2fcdc03827af4ac48023390fe1732b22dad295276aa7f20015974",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185449.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185449.jpg",
+      "type": "jpg",
+      "fingerprint": "de8da72af9ee3a027cacfd47e10dca131482d0a8ed5b5bad51312fd5d71773e9",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185450.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185450.jpg",
+      "type": "jpg",
+      "fingerprint": "1f27ddc9de4cac2e672901c24a91c9a9a86718e32cfe857587b5cfdc78a52231",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185451.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185451.jpg",
+      "type": "jpg",
+      "fingerprint": "a775b1752fbd898025ee835cdee12e776aac4a151130a8a0e63ca258aa9ee555",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185452.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185452.jpg",
+      "type": "jpg",
+      "fingerprint": "c75b4b3f11ca7ffdc34c6d80c8bb9c16631cc61a9789b33d098ab5cf43d42d29",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185453.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185453.jpg",
+      "type": "jpg",
+      "fingerprint": "f5eb1b5ddd9199a44bb81ed59b89281ed6448dc4b4451b8cbac5e40c3875ee2d",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185454.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185454.jpg",
+      "type": "jpg",
+      "fingerprint": "6668323f2b19ce81fc1c07382b5e563f5f2e951b943dc080978055263aeef84e",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185455.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185455.jpg",
+      "type": "jpg",
+      "fingerprint": "c3242a108e983f942bd7e25f43880587075281759704744b6ef85007deb4a28d",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185459.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185459.jpg",
+      "type": "jpg",
+      "fingerprint": "92e49cda6bc76b93c703139dd1fcd270de8ec23b322ef5ae645388e164c8d8da",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185463.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185463.jpg",
+      "type": "jpg",
+      "fingerprint": "59881b075353abda5f05ec38c7044c49aee8b11a84947d728f7297094b4d6359",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185466.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185466.jpg",
+      "type": "jpg",
+      "fingerprint": "54e654522a72e1af0e40251ff3713ca122e029066988476a1b324d21a4118980",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185470.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185470.jpg",
+      "type": "jpg",
+      "fingerprint": "f3b9d6ee331571bdb86cb22e4564d81a9dbf7900b04e123d037655951d46466a",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185493.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185493.jpg",
+      "type": "jpg",
+      "fingerprint": "da3922370e20c4d1080695439ccadad144589e4063785e3314d23ee799ac98c7",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174185494.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174185494.jpg",
+      "type": "jpg",
+      "fingerprint": "8168f578ba5598d6466abb83458da4e85a6a427474a68e92bfacc63e25267e40",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174208172.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174208172.jpg",
+      "type": "jpg",
+      "fingerprint": "88ea36a46b8e1932fac8970a696d80c97329e36bf3e8e49436d15ffe823cfed8",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174208173.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174208173.jpg",
+      "type": "jpg",
+      "fingerprint": "83fa4e39f801b577dd57ebf71d7f45245c8f13b694aae1cc60f079d21f501362",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "asset-174208174.jpg",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\published-assets\\174208174.jpg",
+      "type": "jpg",
+      "fingerprint": "77e7901db2f37cb1df480491a51c44395c90fd022f03ab5441f5394889c63a06",
+      "decision": "reference_only",
+      "reason": "Binary source asset is fully fingerprinted and represented by published-assets-manifest.json; visual use is governed by the asset ledger and product-media mapping."
+    },
+    {
+      "source_id": "requirements",
+      "path": "D:\\Cursor\\Grand\\baihongsnackmachine\\.codex-delivery\\materials\\requirements.md",
+      "type": "markdown",
+      "fingerprint": "44515b1d9ce60031b67432075caf6835af24ae68799404e3f04e9fb4d0ce40e4",
+      "decision": "extract",
+      "extraction_evidence": "Requester requirements, supplied screenshots and public-site verification consolidated in UTF-8 markdown.",
+      "units": [
+        {
+          "unit_id": "company-cn",
+          "locator": "requirements.md#company-cn",
+          "decision": "fact",
+          "fact_ids": [
+            "company-cn"
+          ]
+        },
+        {
+          "unit_id": "company-en",
+          "locator": "requirements.md#company-en",
+          "decision": "fact",
+          "fact_ids": [
+            "company-en"
+          ]
+        },
+        {
+          "unit_id": "brand",
+          "locator": "requirements.md#brand",
+          "decision": "fact",
+          "fact_ids": [
+            "brand"
+          ]
+        },
+        {
+          "unit_id": "domain",
+          "locator": "requirements.md#domain",
+          "decision": "fact",
+          "fact_ids": [
+            "domain"
+          ]
+        },
+        {
+          "unit_id": "phone",
+          "locator": "requirements.md#phone",
+          "decision": "fact",
+          "fact_ids": [
+            "phone"
+          ]
+        },
+        {
+          "unit_id": "email",
+          "locator": "requirements.md#email",
+          "decision": "fact",
+          "fact_ids": [
+            "email"
+          ]
+        },
+        {
+          "unit_id": "address",
+          "locator": "requirements.md#address",
+          "decision": "fact",
+          "fact_ids": [
+            "address"
+          ]
+        },
+        {
+          "unit_id": "catalog-count",
+          "locator": "requirements.md#catalog-count",
+          "decision": "fact",
+          "fact_ids": [
+            "catalog-count"
+          ]
+        },
+        {
+          "unit_id": "catalog-pages",
+          "locator": "requirements.md#catalog-pages",
+          "decision": "fact",
+          "fact_ids": [
+            "catalog-pages"
+          ]
+        },
+        {
+          "unit_id": "banner-1",
+          "locator": "requirements.md#banner-1",
+          "decision": "fact",
+          "fact_ids": [
+            "banner-1"
+          ]
+        },
+        {
+          "unit_id": "banner-2",
+          "locator": "requirements.md#banner-2",
+          "decision": "fact",
+          "fact_ids": [
+            "banner-2"
+          ]
+        },
+        {
+          "unit_id": "banner-3",
+          "locator": "requirements.md#banner-3",
+          "decision": "fact",
+          "fact_ids": [
+            "banner-3"
+          ]
+        },
+        {
+          "unit_id": "logo",
+          "locator": "requirements.md#logo",
+          "decision": "fact",
+          "fact_ids": [
+            "logo"
+          ]
+        },
+        {
+          "unit_id": "product-interaction",
+          "locator": "requirements.md#product-interaction",
+          "decision": "fact",
+          "fact_ids": [
+            "product-interaction"
+          ]
+        }
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "company-cn",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "legal_name_zh",
+      "decision": "use",
+      "source_value_hash": "03afe5153bd40a0e1ee7c80d0b04fb2e3f468bfa7bebdffb4591c119e7f8719c",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "company-cn"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "company-en",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "legal_name_en",
+      "decision": "use",
+      "source_value_hash": "1479b377b0a4e411d7c33adfffd5908d05d3f6b5dfb4953b86d65eb4b13bfd5b",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "company-en"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "brand",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "brand",
+      "decision": "use",
+      "source_value_hash": "f3f7d4e732b4b0e84071345c62c273c86efbbe6043e5156df23308742befd174",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "brand"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "domain",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "domain",
+      "decision": "use",
+      "source_value_hash": "295ab2d94410f404773681d1833da370a1b7367ef8888bfd0fb03cd48ca4e9e6",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "domain"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "phone",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "phone",
+      "decision": "use",
+      "source_value_hash": "a6407f4d4b263a42c44dbff98340e5706f49e370916b34fe36ee367b96d16421",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "phone"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "email",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "email",
+      "decision": "use",
+      "source_value_hash": "db2bd7b41e0fab9aa1ea7a46a6c78fdab329b1c0a8c7ddc3b29c60ea453e20fe",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "email"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "address",
+      "entity_type": "organization",
+      "entity_key": "baihong",
+      "field": "address",
+      "decision": "use",
+      "source_value_hash": "121c7f2781ccc236c2b3758aec4f8965edc0d1022f7a79bd833db2522c52a46c",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "address"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "catalog-count",
+      "entity_type": "catalog",
+      "entity_key": "products",
+      "field": "published_product_count",
+      "decision": "use",
+      "source_value_hash": "ee62de25ccc2b55d3a0495244b246fb97055b6f1c2697d837b8e94976c03756f",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "catalog-count"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "catalog-pages",
+      "entity_type": "catalog",
+      "entity_key": "products",
+      "field": "published_page_count",
+      "decision": "use",
+      "source_value_hash": "31489056e0916d59fe3add79e63f095af3ffb81604691f21cad442a85c7be617",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "catalog-pages"
+        }
+      ],
+      "expected_destinations": [
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "banner-1",
+      "entity_type": "asset",
+      "entity_key": "174208172.jpg",
+      "field": "approved_banner",
+      "decision": "use",
+      "source_value_hash": "d226c93128a5db722ffc11e482d7596ac5c14c6599297a8524de428e203fef19",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "banner-1"
+        }
+      ],
+      "expected_destinations": [
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "banner-2",
+      "entity_type": "asset",
+      "entity_key": "174208173.jpg",
+      "field": "approved_banner",
+      "decision": "use",
+      "source_value_hash": "f0964e3dfd4e60f82638a5769c69782dc8022555705d562dde1bae1453e0e515",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "banner-2"
+        }
+      ],
+      "expected_destinations": [
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "banner-3",
+      "entity_type": "asset",
+      "entity_key": "174208174.jpg",
+      "field": "approved_banner",
+      "decision": "use",
+      "source_value_hash": "b456a4f906ee461a0c263441681e15ebfbca26d01689fe5c115baf6e1d3fb5ba",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "banner-3"
+        }
+      ],
+      "expected_destinations": [
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "logo",
+      "entity_type": "asset",
+      "entity_key": "174184857.png",
+      "field": "official_logo",
+      "decision": "use",
+      "source_value_hash": "1ba16b8a931229af68cee577118c297233d3d92c337ee6322435f1fd5d18249f",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "logo"
+        }
+      ],
+      "expected_destinations": [
+        "backend",
+        "frontend"
+      ]
+    },
+    {
+      "fact_id": "product-interaction",
+      "entity_type": "requirement",
+      "entity_key": "products-page",
+      "field": "partial_refresh",
+      "decision": "use",
+      "source_value_hash": "27d857598e8f3f295c6b645b353112a3c54bd773eed1c5c2fa68532f12de3bc6",
+      "source_refs": [
+        {
+          "source_id": "requirements",
+          "unit_id": "product-interaction"
+        }
+      ],
+      "expected_destinations": [
+        "frontend"
+      ]
+    }
+  ]
+}
