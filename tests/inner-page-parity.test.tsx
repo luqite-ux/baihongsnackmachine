@@ -5,14 +5,27 @@ import { describe, expect, test } from "vitest"
 import { PageHeader } from "@/components/page-header"
 
 describe("legacy inner-page parity", () => {
-  test("uses the shared dark photographic hero for content pages", () => {
+  test("uses the original shared photographic hero and product collage for content pages", () => {
     render(<PageHeader title="NEWS" description="Page introduction" />)
 
     expect(screen.getByRole("heading", { level: 1, name: "NEWS" })).toBeVisible()
     const hero = screen.getByTestId("legacy-page-hero")
     expect(hero).toHaveClass("text-white")
-    expect(hero.querySelector("img")).toHaveAttribute("src", expect.stringContaining("banner-2.jpg"))
-    expect(hero.querySelector("img")).toHaveClass("object-left", "md:object-center")
+    expect(hero.querySelector('img[alt=""]')).toHaveAttribute("src", expect.stringContaining("product-display-bg.jpg"))
+    expect(screen.getByRole("img", { name: "Baihong product range" })).toHaveAttribute(
+      "src",
+      expect.stringContaining("product-display-collage.png"),
+    )
+  })
+
+  test("keeps the original About page sections and wording", () => {
+    const about = fs.readFileSync(path.join(process.cwd(), "app/about/page.tsx"), "utf8")
+
+    expect(about).toContain("The company was established in 2013")
+    expect(about).toContain("VIEW MORE &gt;")
+    expect(about).toContain("CapabilitySection")
+    expect(about).toContain("VIDEO PRESENTATION")
+    expect(about).toContain("about-factory.jpg")
   })
 
   test("keeps the product catalogue shell off product detail routes", () => {

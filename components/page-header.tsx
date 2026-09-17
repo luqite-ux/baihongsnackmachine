@@ -19,28 +19,36 @@ export function PageHeader({
   return (
     <section
       data-testid="legacy-page-hero"
-      className={`relative isolate overflow-hidden text-white ${variant === "solid" ? "bg-[#0e075f]" : "bg-black"}`}
+      className="relative isolate overflow-hidden bg-black text-white"
     >
-      {variant === "image" && (
-        <>
+      <div className="pointer-events-none absolute inset-0">
+        <Image
+          src="/images/banners/product-display-bg.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center max-md:object-left"
+        />
+        <div className="absolute inset-0 bg-black/35 md:hidden" />
+      </div>
+      <div className="relative mx-auto grid min-h-[445px] max-w-[1248px] items-center gap-4 px-5 py-10 md:h-[445px] md:min-h-0 md:grid-cols-[53%_47%] md:px-6 md:py-0 lg:px-0">
+        <div className="relative z-10 max-w-[650px] self-center">
+          {eyebrow && <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#f39a00]">{eyebrow}</p>}
+          <h1 className="text-[40px] font-black uppercase leading-none tracking-[0.01em] sm:text-[50px]">{title}</h1>
+          {description && <p className="mt-7 max-w-[620px] text-[17px] font-bold leading-[1.35] text-white">{description}</p>}
+          {secondaryDescription && <p className="mt-4 max-w-[650px] text-[17px] font-bold leading-[1.35] text-white">{secondaryDescription}</p>}
+          {children}
+        </div>
+        <div className="relative mx-auto aspect-[880/658] w-full max-w-[590px] self-center max-md:mt-2 max-md:max-w-[430px]">
           <Image
-            src="/images/banners/banner-2.jpg"
-            alt=""
+            src="/images/banners/product-display-collage.png"
+            alt="Baihong product range"
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-left md:object-center"
+            sizes="(min-width: 768px) 47vw, 92vw"
+            className="object-contain"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10" />
-        </>
-      )}
-      <div className="relative mx-auto flex min-h-[355px] max-w-[1000px] items-center px-4 py-12 sm:px-6 lg:px-0">
-        <div className="max-w-[610px]">
-          {eyebrow && <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#f39a00]">{eyebrow}</p>}
-          <h1 className="text-4xl font-black uppercase tracking-tight sm:text-5xl">{title}</h1>
-          {description && <p className="mt-5 max-w-2xl text-base font-semibold leading-5 text-white">{description}</p>}
-          {secondaryDescription && <p className="mt-3 max-w-2xl text-base font-semibold leading-5 text-white">{secondaryDescription}</p>}
-          {children}
         </div>
       </div>
     </section>

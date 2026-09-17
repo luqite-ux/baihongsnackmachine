@@ -20,11 +20,14 @@ export default async function NewsPage() {
     <>
       <PageHeader
         title="NEWS"
-        description={siteConfig.positioning}
-        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing and sales internally, with complete quality inspection instruments and an experienced production and service team."
+        description="A manufacturer specializing in the design, production, and processing of food machinery"
+        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."
       />
-      <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
-        <h2 className="mb-8 text-3xl font-black text-foreground">News and Information</h2>
+      <div className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
+        <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-4 text-[14px] text-neutral-500">
+          <Link href="/" className="transition-colors hover:text-[#f39a00]">HOME</Link><span aria-hidden="true">›</span><span>NEWS</span>
+        </nav>
+        <h2 className="mb-9 text-[38px] font-black text-neutral-950">News and Information</h2>
         {articles.length === 0 ? (
           <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border bg-secondary/30 py-20 text-center">
             <Newspaper className="h-9 w-9 text-muted-foreground" aria-hidden="true" />
@@ -34,14 +37,15 @@ export default async function NewsPage() {
             </p>
           </div>
         ) : (
-          <ul className="grid gap-6 sm:grid-cols-2">
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {articles.map((article) => (
-              <li key={article.slug} className="rounded-lg border border-border p-6">
+              <li key={article.slug} className="flex min-h-[235px] flex-col bg-white p-7 shadow-[0_5px_24px_rgba(0,0,0,0.07)]">
+                {article.publishedAt && <time className="text-[15px] font-bold text-neutral-500">{new Date(article.publishedAt).toISOString().slice(0, 10)}</time>}
                 <Link href={`/news/${article.slug}`} className="hover:text-primary">
-                  <h2 className="line-clamp-2 font-semibold text-foreground">{article.title}</h2>
+                  <h3 className="mt-5 line-clamp-3 text-[18px] font-bold leading-6 text-neutral-950">{article.title}</h3>
                 </Link>
-                {article.publishedAt && <time className="mt-2 block text-xs text-muted-foreground">{new Date(article.publishedAt).toLocaleDateString("en-US")}</time>}
-                {article.excerpt && <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{article.excerpt}</p>}
+                {article.excerpt && <p className="mt-3 line-clamp-2 text-sm leading-5 text-neutral-600">{article.excerpt}</p>}
+                <Link href={`/news/${article.slug}`} className="mt-auto pt-5 text-sm font-bold text-[#f39a00]">more &gt;</Link>
               </li>
             ))}
           </ul>
