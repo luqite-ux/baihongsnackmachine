@@ -7,6 +7,7 @@ import { siteConfig } from "@/lib/site-config"
 export function SiteFooter() {
   const year = new Date().getFullYear()
   const copyrightOwner = siteConfig.legalNameEn.replace(/[.;:!?。；：！？\s]+$/u, "")
+  const copyright = `© ${year} ${copyrightOwner}. All rights reserved.`
   const productLinks = [
     { label: "Grill", href: "/products?category=grill" },
     { label: "Aluminum Plate Category", href: "/products?category=aluminum-plate" },
@@ -75,7 +76,7 @@ export function SiteFooter() {
 
       <div className="border-t border-white/10 bg-[#0b0b0b]">
         <p className="mx-auto max-w-[1200px] px-4 py-4 text-xs text-white/55 lg:px-0">
-          © {year} {copyrightOwner}. All rights reserved.
+          {copyright}
         </p>
       </div>
     </footer>

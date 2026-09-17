@@ -17,5 +17,6 @@ describe("legacy footer contract", () => {
       "mailto:info@baihongsnackmachine.com",
     )
     expect(footer).toHaveTextContent("Xuzhou Baihong Kitchen Equipment Co., Ltd. All rights reserved.")
+    expect(footer.textContent).not.toContain("Ltd .")
   })
 })
