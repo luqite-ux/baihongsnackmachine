@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 interface ProductsPageProps {
-  searchParams: Promise<{ category?: string; sub?: string; page?: string }>
+  searchParams: Promise<{ category?: string; sub?: string; page?: string; q?: string }>
 }
 
 const PAGE_SIZE = 6
@@ -31,8 +31,9 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
       : undefined
     : undefined
   const page = Math.max(1, Number.parseInt(params.page ?? "1", 10) || 1)
+  const search = params.q?.trim()
 
-  const data = await fetchProducts({ category, subcategory: sub, page, pageSize: PAGE_SIZE })
+  const data = await fetchProducts({ category, subcategory: sub, search, page, pageSize: PAGE_SIZE })
 
   return (
     <>
@@ -50,7 +51,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             <CategoryNav categories={categories} />
           </aside>
           <Suspense fallback={<ProductGridSkeleton />}>
-            <ProductCatalog data={data} activeCategory={activeCategory} category={category} sub={sub} />
+            <ProductCatalog data={data} activeCategory={activeCategory} category={category} sub={sub} search={search} />
           </Suspense>
         </div>
       </div>

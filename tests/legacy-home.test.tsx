@@ -29,11 +29,11 @@ describe("legacy home sequence", () => {
     )
 
     const orderedLabels = [
-      "Popular Search",
+      "Popular Keywords",
       "Main Product Category",
       "Years of Manufacturing Experience",
       "About Us",
-      "Business Advantages",
+      "BUSINESS ADVANTAGES",
       "Quality Service",
       "News",
       "Frequently Asked Questions",
@@ -45,5 +45,11 @@ describe("legacy home sequence", () => {
     expect(positions).toEqual([...positions].sort((a, b) => a - b))
     expect(screen.getAllByRole("link", { name: /Product [1-6]/ })).toHaveLength(6)
     expect(screen.getAllByRole("link", { name: "Grill" }).every((link) => link.getAttribute("href") === "/products?category=grill")).toBe(true)
+    expect(screen.getByRole("searchbox", { name: /search products/i })).toBeVisible()
+    expect(screen.getByRole("link", { name: /view more/i })).toHaveAttribute("href", "/products")
+    expect(screen.getAllByText(/burger grills, sausage ovens, bird egg ovens/i).length).toBeGreaterThan(0)
+    expect(screen.getAllByText(/stable production capacity and a comprehensive service system/i).length).toBeGreaterThan(0)
+    expect(screen.getByRole("heading", { name: "Professional services started in 2013" })).toBeVisible()
+    expect(screen.getByLabelText("Factory gallery")).toBeVisible()
   })
 })

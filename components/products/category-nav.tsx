@@ -36,7 +36,7 @@ export function CategoryNav({ categories }: { categories: ProductCategory[] }) {
       {categories.map((category) => {
         const isActiveCategory = activeCategory === category.slug
         return (
-          <div key={category.slug}>
+          <div key={category.slug} className="group relative">
             <Link
               href={`/products?category=${category.slug}`}
               className={cn(
@@ -51,8 +51,8 @@ export function CategoryNav({ categories }: { categories: ProductCategory[] }) {
               <ChevronRight className="h-4 w-4 shrink-0" aria-hidden="true" />
             </Link>
 
-            {isActiveCategory && category.subcategories.length > 0 && (
-              <ul className="border-b border-white bg-white py-1">
+            {category.subcategories.length > 0 && (
+              <ul data-hover-submenu={category.slug} className="invisible absolute left-full top-0 z-40 min-w-64 bg-[#f39a00] py-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                 {category.subcategories.map((sub) => {
                   const isActiveSub = activeSub === sub.slug
                   return (
@@ -60,8 +60,8 @@ export function CategoryNav({ categories }: { categories: ProductCategory[] }) {
                       <Link
                         href={`/products?category=${category.slug}&sub=${sub.slug}`}
                         className={cn(
-                          "block px-6 py-2 text-xs transition-colors",
-                          isActiveSub ? "font-bold text-[#f39a00]" : "text-neutral-600 hover:text-[#f39a00]",
+                          "block px-5 py-3 text-sm font-bold transition-colors",
+                          isActiveSub ? "bg-white text-[#f39a00]" : "text-white hover:bg-white hover:text-[#f39a00]",
                         )}
                         aria-current={isActiveSub ? "page" : undefined}
                       >

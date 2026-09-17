@@ -6,6 +6,7 @@ export interface ProductFilters {
   subcategory?: string
   page?: number
   pageSize?: number
+  search?: string
 }
 
 export interface ProductPage {
@@ -16,7 +17,7 @@ export interface ProductPage {
   totalPages: number
 }
 
-type ProductRow = {
+export type ProductRow = {
   slug: string | null
   name: string | null
   name_i18n: LocalizedText | null
@@ -28,6 +29,7 @@ type ProductRow = {
 }
 
 type CategoryRow = {
+  parent_id?: string | null
   slug: string | null
   name: string | null
   name_i18n: LocalizedText | null
@@ -41,12 +43,15 @@ function localized(value: LocalizedText | null, fallback: string): LocalizedText
   return { en: fallback }
 }
 
-function mapProduct(row: ProductRow): Product {
+export function mapProduct(row: ProductRow): Product {
   const extra = row.extra_data || {}
   const width = typeof extra.image_width === "number" ? extra.image_width : 1000
   const height = typeof extra.image_height === "number" ? extra.image_height : 1000
   const subcategorySlug = typeof extra.subcategory === "string" ? extra.subcategory : undefined
   const name = localized(row.name_i18n, row.name || "Commercial Food Machine")
+  const rawImages = Array.isArray(extra.images) ? extra.images.filter((item): item is string => typeof item === "string" && item.length > 0) : []
+  const imageSources = Array.from(new Set([row.image_url, ...rawImages].filter((item): item is string => Boolean(item))))
+  const images = imageSources.map((src) => ({ src, width, height, alt: { en: name.en || name.zh || row.name || "Commercial food machine" } }))
   return {
     slug: row.slug || "product",
     name,
@@ -60,6 +65,8 @@ function mapProduct(row: ProductRow): Product {
       height,
       alt: { en: name.en || name.zh || row.name || "Commercial food machine" },
     },
+    images,
+    model: typeof extra.model === "string" && extra.model.trim() ? extra.model.trim() : undefined,
     isVerifiedImage: Boolean(row.image_url),
   }
 }
@@ -84,6 +91,11 @@ export async function fetchProducts(filters: ProductFilters = {}): Promise<Produ
   if (filters.subcategory) {
     countQuery = countQuery.contains("extra_data", { subcategory: filters.subcategory })
     dataQuery = dataQuery.contains("extra_data", { subcategory: filters.subcategory })
+  }
+  if (filters.search?.trim()) {
+    const term = `%${filters.search.trim().replaceAll("%", "")}%`
+    countQuery = countQuery.ilike("name", term)
+    dataQuery = dataQuery.ilike("name", term)
   }
   const { count, error: countError } = await countQuery
   if (countError) throw new Error(`Unable to count products: ${countError.message}`)
@@ -122,9 +134,10 @@ export async function fetchCategories(): Promise<ProductCategory[]> {
   if (!db || !tenantId) return []
   const { data, error } = await db
     .from("product_categories")
-    .select("slug,name,name_i18n,description,description_i18n,extra_data")
+    .select("slug,name,name_i18n,description,description_i18n,extra_data,parent_id")
     .eq("tenant_id", tenantId)
     .eq("is_active", true)
+    .is("parent_id", null)
     .order("sort_order")
   if (error) throw new Error(`Unable to load categories: ${error.message}`)
   return (data as CategoryRow[]).map((row) => {

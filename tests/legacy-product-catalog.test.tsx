@@ -42,6 +42,7 @@ describe("legacy product catalogue", () => {
     expect(screen.getByRole("heading", { name: "PRODUCT DISPLAY" })).toBeVisible()
     expect(screen.getAllByRole("navigation", { name: "Product categories" })[0]).toHaveClass("bg-[#f3f3f3]")
     expect(screen.getAllByRole("link", { name: "Gas Grill" }).every((link) => link.getAttribute("href") === "/products?category=grill&sub=gas-grill")).toBe(true)
+    expect(screen.getAllByRole("navigation", { name: "Product categories" })[0].querySelector('[data-hover-submenu="grill"]')).toBeTruthy()
   })
 
   test("renders six complete product links and preserves filters in pagination", () => {

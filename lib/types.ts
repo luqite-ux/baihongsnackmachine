@@ -44,6 +44,8 @@ export interface Product {
   summary?: LocalizedText
   description?: LocalizedText
   image: ProductImage
+  images?: ProductImage[]
+  model?: string
   /** True when the photo is a verified customer-supplied asset rather than a placeholder. */
   isVerifiedImage?: boolean
 }

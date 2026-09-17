@@ -10,7 +10,7 @@ export function MainNav() {
 
   return (
     <nav aria-label="Main" className="hidden md:block">
-      <ul className="flex items-center gap-0 text-[13px] font-bold uppercase tracking-[0.02em]">
+      <ul className="flex items-center gap-8 text-[18px] font-bold uppercase">
         {navItems.map((item) => {
           const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
           return (
@@ -19,7 +19,7 @@ export function MainNav() {
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
                 className={cn(
-                  "relative block px-5 py-7 text-neutral-950 transition-colors hover:text-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f39a00]",
+                  "relative block px-4 py-8 text-neutral-950 transition-colors hover:text-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f39a00]",
                   isActive && "text-[#f39a00]",
                 )}
               >

@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react"
+import { fireEvent, render, screen, within } from "@testing-library/react"
 import { describe, expect, test, vi } from "vitest"
 import { SiteHeader } from "@/components/site-header"
 import { BannerCarousel } from "@/components/home/banner-carousel"
@@ -16,8 +16,13 @@ describe("legacy header and banner contract", () => {
     expect(screen.getByRole("link", { name: /baihong home/i })).toHaveAttribute("href", "/")
     expect(screen.getByRole("link", { name: "HOME" })).toHaveAttribute("href", "/")
     expect(screen.getByRole("link", { name: /15252102737/ })).toHaveAttribute("href", "tel:+8615252102737")
-    expect(screen.getByTestId("primary-header-row")).toHaveClass("md:h-[106px]")
-    expect(screen.getByAltText("BAIHONG logo")).toHaveClass("md:h-[88px]")
+    expect(screen.getByTestId("primary-header-row")).toHaveClass("md:h-[130px]")
+    expect(screen.getByAltText("BAIHONG logo")).toHaveClass("md:h-[112px]")
+    fireEvent.click(screen.getByRole("button", { name: /English/i }))
+    expect(screen.getByRole("menuitem", { name: "日本語" })).toBeVisible()
+    expect(screen.getByRole("menuitem", { name: "한국어" })).toBeVisible()
+    expect(screen.getByRole("menuitem", { name: "Español" })).toBeVisible()
+    expect(screen.getByRole("menuitem", { name: "Русский" })).toBeVisible()
   })
 
   test("uses the original banner artwork without replacement quote CTAs", () => {

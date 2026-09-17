@@ -5,6 +5,7 @@ function buildHref(params: Record<string, string | undefined>, page: number) {
   const search = new URLSearchParams()
   if (params.category) search.set("category", params.category)
   if (params.sub) search.set("sub", params.sub)
+  if (params.search) search.set("q", params.search)
   if (page > 1) search.set("page", String(page))
   const query = search.toString()
   return query ? `/products?${query}` : "/products"
@@ -15,15 +16,17 @@ export function ProductPagination({
   totalPages,
   category,
   sub,
+  search,
 }: {
   page: number
   totalPages: number
   category?: string
   sub?: string
+  search?: string
 }) {
   if (totalPages <= 1) return null
 
-  const params = { category, sub }
+  const params = { category, sub, search }
 
   return (
     <nav aria-label="Product pages" className="mt-9 flex items-center justify-center gap-2">

@@ -19,11 +19,13 @@ export function ProductCatalog({
   activeCategory,
   category,
   sub,
+  search,
 }: {
   data: ProductPage
   activeCategory?: ProductCategory
   category?: string
   sub?: string
+  search?: string
 }) {
   return (
     <div
@@ -31,7 +33,7 @@ export function ProductCatalog({
       className="animate-in fade-in slide-in-from-bottom-2 duration-200"
     >
       <div role="status" aria-live="polite" className="mb-4 border-b border-neutral-200 pb-3 text-sm text-neutral-500">
-        {activeCategory ? `${resolveText(activeCategory.name)}: ` : ""}
+        {search ? `Search “${search}”: ` : activeCategory ? `${resolveText(activeCategory.name)}: ` : ""}
         Showing {data.items.length} of {data.total} product{data.total === 1 ? "" : "s"}
       </div>
 
@@ -48,7 +50,7 @@ export function ProductCatalog({
         </ul>
       )}
 
-      <ProductPagination page={data.page} totalPages={data.totalPages} category={category} sub={sub} />
+      <ProductPagination page={data.page} totalPages={data.totalPages} category={category} sub={sub} search={search} />
     </div>
   )
 }

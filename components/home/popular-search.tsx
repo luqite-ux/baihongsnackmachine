@@ -1,23 +1,18 @@
-import Link from "next/link"
+import { Search } from "lucide-react"
 import type { ProductCategory } from "@/lib/types"
 import { resolveText } from "@/lib/locale"
 
 export function PopularSearch({ categories }: { categories: ProductCategory[] }) {
   return (
-    <nav aria-label="Popular product searches" className="border-b border-neutral-200 bg-white">
-      <div className="mx-auto flex min-h-11 max-w-[1200px] items-center gap-4 overflow-x-auto px-4 text-xs lg:px-0">
-        <strong className="shrink-0 uppercase text-[#f39a00]">Popular Search</strong>
-        <span className="h-4 w-px shrink-0 bg-neutral-300" aria-hidden="true" />
-        {categories.slice(0, 7).map((category) => (
-          <Link
-            key={category.slug}
-            href={`/products?category=${category.slug}`}
-            className="shrink-0 text-neutral-600 hover:text-[#f39a00]"
-          >
-            {resolveText(category.name)}
-          </Link>
-        ))}
+    <section aria-label="Popular product searches" className="bg-[#f39a00] text-white">
+      <div className="mx-auto flex min-h-[114px] max-w-[1170px] flex-col items-center justify-between gap-5 px-4 py-5 md:flex-row lg:px-0">
+        <p className="text-[18px] font-bold">Popular Keywords： {categories.slice(0, 3).map((category) => resolveText(category.name)).join(", ")}</p>
+        <form action="/products" className="flex w-full max-w-[402px] overflow-hidden rounded-full bg-white">
+          <label htmlFor="home-product-search" className="sr-only">Search products</label>
+          <input id="home-product-search" name="q" type="search" className="h-12 min-w-0 flex-1 bg-transparent px-6 text-neutral-950 outline-none" />
+          <button type="submit" aria-label="Submit product search" className="grid w-16 place-items-center text-[#1269ae]"><Search className="h-7 w-7" /></button>
+        </form>
       </div>
-    </nav>
+    </section>
   )
 }

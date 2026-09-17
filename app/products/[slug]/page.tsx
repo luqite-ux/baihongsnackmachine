@@ -98,10 +98,19 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
           />
         </div>
 
-        <div className="mt-8">
+          <div className="mt-8">
           <div className="text-center">
             {category && <p className="text-sm font-semibold uppercase tracking-wide text-primary">{resolveText(category.name)}</p>}
             <h1 className="mt-2 text-3xl font-bold text-foreground">{name}</h1>
+            {product.model && <p className="mt-5 text-sm text-neutral-600">{product.model}</p>}
+          </div>
+
+          <div aria-label="Product image gallery" className="mt-14 space-y-10">
+            {(product.images?.length ? product.images : [product.image]).map((image, index) => (
+              <div key={`${image.src}-${index}`} className="relative mx-auto aspect-[4/3] w-full bg-white">
+                <Image src={image.src} alt={`${resolveText(image.alt) || name}${index ? ` ${index + 1}` : ""}`} fill sizes="(min-width: 1024px) 896px, 100vw" className="object-contain" />
+              </div>
+            ))}
           </div>
           <div className="mt-8 space-y-3 text-muted-foreground">
             {product.summary && <p>{resolveText(product.summary)}</p>}
