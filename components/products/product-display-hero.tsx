@@ -1,28 +1,32 @@
 import Image from "next/image"
-import { Reveal } from "@/components/motion/reveal"
 
 export function ProductDisplayHero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#061c34] text-white">
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-[58%] opacity-90 max-md:w-full max-md:opacity-45">
+    <section className="relative isolate overflow-hidden bg-black text-white">
+      <div className="pointer-events-none absolute inset-0">
         <Image
-          src="/images/banners/banner-2.jpg"
+          src="/images/banners/product-display-bg.jpg"
           alt=""
           fill
           priority
-          sizes="(min-width: 768px) 58vw, 100vw"
-          className="object-contain object-right md:object-cover md:object-center"
+          sizes="100vw"
+          className="object-cover object-center max-md:object-left"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#061c34] via-[#061c34]/75 to-[#061c34]/5" />
+        <div className="absolute inset-0 bg-black/35 md:hidden" />
       </div>
-      <div className="relative mx-auto flex min-h-[250px] max-w-[1200px] items-center px-4 py-12 lg:px-0">
-        <Reveal className="max-w-xl">
-          <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#f39a00]">Baihong Equipment</p>
-          <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">PRODUCT DISPLAY</h1>
-          <p className="mt-4 max-w-lg text-sm leading-6 text-white/80">
-            Commercial barbecue grills, aluminum plate machines, fryers and snack equipment for food-service buyers.
+      <div className="relative mx-auto grid min-h-[445px] max-w-[1248px] items-center gap-4 px-5 py-10 md:h-[445px] md:min-h-0 md:grid-cols-[53%_47%] md:px-6 md:py-0 lg:px-0">
+        <div className="relative z-10 max-w-[650px] self-center">
+          <h1 className="text-[40px] font-black leading-none tracking-[0.01em] sm:text-[50px]">PRODUCT DISPLAY</h1>
+          <p className="mt-7 max-w-[620px] text-[17px] font-bold leading-[1.35]">
+            A manufacturer specializing in the design, production, and processing of food machinery
           </p>
-        </Reveal>
+          <p className="mt-4 max-w-[650px] text-[17px] font-bold leading-[1.35]">
+            Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience.
+          </p>
+        </div>
+        <div className="relative mx-auto aspect-[880/658] w-full max-w-[590px] self-center max-md:mt-2 max-md:max-w-[430px]">
+          <Image src="/images/banners/product-display-collage.png" alt="Baihong product range" fill priority sizes="(min-width: 768px) 47vw, 92vw" className="object-contain" />
+        </div>
       </div>
     </section>
   )

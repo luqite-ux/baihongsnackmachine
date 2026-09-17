@@ -3,6 +3,7 @@ import { describe, expect, test, vi } from "vitest"
 import { ProductDisplayHero } from "@/components/products/product-display-hero"
 import { CategoryNav } from "@/components/products/category-nav"
 import { ProductCatalog } from "@/components/product-catalog"
+import { ProductPageIntro } from "@/components/products/product-page-intro"
 import type { ProductPage } from "@/lib/products-db"
 import type { ProductCategory } from "@/lib/types"
 
@@ -36,10 +37,21 @@ const data: ProductPage = {
 }
 
 describe("legacy product catalogue", () => {
-  test("renders the navy product-display hero and grey category rail", () => {
+  test("keeps the original breadcrumb and product introduction copy", () => {
+    render(<ProductPageIntro />)
+
+    expect(screen.getByRole("navigation", { name: "Breadcrumb" })).toHaveTextContent("HOME")
+    expect(screen.getByRole("heading", { name: "Main Product Category" })).toBeVisible()
+    expect(screen.getByText(/burger grills, sausage ovens, bird egg ovens/i)).toBeVisible()
+    expect(screen.getByText(/stable production capacity and a comprehensive service system/i)).toBeVisible()
+  })
+
+  test("renders the original product-display artwork, copy and grey category rail", () => {
     render(<><ProductDisplayHero /><CategoryNav categories={categories} /></>)
 
     expect(screen.getByRole("heading", { name: "PRODUCT DISPLAY" })).toBeVisible()
+    expect(screen.getByText(/Introducing advanced technology, integrating research and development/i)).toBeVisible()
+    expect(screen.getByRole("img", { name: "Baihong product range" })).toHaveAttribute("src", expect.stringContaining("product-display-collage.png"))
     expect(screen.getAllByRole("navigation", { name: "Product categories" })[0]).toHaveClass("bg-[#f3f3f3]")
     expect(screen.getAllByRole("link", { name: "Gas Grill" }).every((link) => link.getAttribute("href") === "/products?category=grill&sub=gas-grill")).toBe(true)
     expect(screen.getAllByRole("navigation", { name: "Product categories" })[0].querySelector('[data-hover-submenu="grill"]')).toBeTruthy()
