@@ -18,6 +18,7 @@ function existingServiceExpiryIntegration(request: NextRequest) {
 export const config = { matcher: ["/admin/:path*"] }
 
 export async function middleware(request: ServiceGuardRequest) {
+  if (request.nextUrl.pathname === '/service-expired') return ServiceGuardNextResponse.next()
   if (!isServiceGuardExcludedPath(request.nextUrl.pathname) && !await isWebsiteServiceAvailable()) return ServiceGuardNextResponse.rewrite(new URL('/service-expired', request.url))
   return existingServiceExpiryIntegration(request)
 }
