@@ -16,7 +16,11 @@ describe("legacy header and banner contract", () => {
     expect(screen.getByRole("link", { name: /baihong home/i })).toHaveAttribute("href", "/")
     expect(screen.getByRole("link", { name: "HOME" })).toHaveAttribute("href", "/")
     expect(screen.getByRole("link", { name: /15252102737/ })).toHaveAttribute("href", "tel:+8615252102737")
-    expect(screen.getByTestId("primary-header-row")).toHaveClass("md:h-[130px]")
+    const utilityRow = screen.getByText(/specializing in the design, production and processing of food machinery/i).parentElement
+    expect(utilityRow).toHaveClass("max-w-[1250px]")
+    expect(utilityRow).not.toHaveClass("max-w-[1740px]")
+    expect(screen.getByTestId("primary-header-row")).toHaveClass("md:h-[130px]", "max-w-[1250px]")
+    expect(screen.getByTestId("primary-header-row")).not.toHaveClass("max-w-[1740px]")
     expect(screen.getByAltText("BAIHONG logo")).toHaveClass("md:h-[112px]")
     fireEvent.click(screen.getByRole("button", { name: /English/i }))
     expect(screen.getByRole("menuitem", { name: "日本語" })).toBeVisible()
