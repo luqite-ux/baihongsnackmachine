@@ -86,25 +86,31 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </span>
       </nav>
 
-      <div className="grid gap-10 md:grid-cols-2">
-        <div className="relative flex aspect-square items-center justify-center rounded-lg border border-border bg-neutral-50">
+      <div className="mx-auto max-w-4xl">
+        <div className="relative flex aspect-[16/9] items-center justify-center bg-white">
           <Image
             src={product.image.src || "/placeholder.svg"}
             alt={resolveText(product.image.alt) || name}
             fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-contain p-10"
+            sizes="(min-width: 1024px) 896px, 100vw"
+            className="object-contain p-6 sm:p-10"
             priority
           />
         </div>
 
-        <div>
-          {category && <p className="text-sm font-semibold uppercase tracking-wide text-primary">{resolveText(category.name)}</p>}
-          <h1 className="mt-2 text-3xl font-bold text-foreground">{name}</h1>
-          {product.summary && <p className="mt-4 text-muted-foreground">{resolveText(product.summary)}</p>}
-          {product.description && <p className="mt-3 text-muted-foreground">{resolveText(product.description)}</p>}
+        <div className="mt-8">
+          <div className="text-center">
+            {category && <p className="text-sm font-semibold uppercase tracking-wide text-primary">{resolveText(category.name)}</p>}
+            <h1 className="mt-2 text-3xl font-bold text-foreground">{name}</h1>
+          </div>
+          <div className="mt-8 space-y-3 text-muted-foreground">
+            {product.summary && <p>{resolveText(product.summary)}</p>}
+            {product.description && resolveText(product.description) !== resolveText(product.summary) && (
+              <p>{resolveText(product.description)}</p>
+            )}
+          </div>
 
-          <div className="mt-8 rounded-lg border border-border bg-secondary/40 p-5">
+          <div className="mt-8 border border-border bg-secondary/40 p-5">
             <p className="text-sm text-muted-foreground">
               Pricing, customization and lead time depend on your order. Send an inquiry and our team will follow
               up.

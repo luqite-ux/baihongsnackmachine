@@ -29,11 +29,12 @@ export default function FaqPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <PageHeader
-        eyebrow="Support"
-        title="Frequently Asked Questions"
-        description="Common questions about requesting quotes and placing orders with Baihong."
+        title="FAQ"
+        description={siteConfig.positioning}
+        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing and sales internally, with complete quality inspection instruments and an experienced production and service team."
       />
       <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+        <h2 className="mb-8 text-3xl font-black text-foreground">Frequently Asked Questions</h2>
         <Accordion type="single" collapsible>
           {faqItems.map((item, i) => (
             <AccordionItem key={i} value={`item-${i}`}>

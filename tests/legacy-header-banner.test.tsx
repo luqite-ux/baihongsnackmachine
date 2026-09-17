@@ -16,6 +16,8 @@ describe("legacy header and banner contract", () => {
     expect(screen.getByRole("link", { name: /baihong home/i })).toHaveAttribute("href", "/")
     expect(screen.getByRole("link", { name: "HOME" })).toHaveAttribute("href", "/")
     expect(screen.getByRole("link", { name: /15252102737/ })).toHaveAttribute("href", "tel:+8615252102737")
+    expect(screen.getByTestId("primary-header-row")).toHaveClass("md:h-[106px]")
+    expect(screen.getByAltText("BAIHONG logo")).toHaveClass("md:h-[88px]")
   })
 
   test("uses the original banner artwork without replacement quote CTAs", () => {

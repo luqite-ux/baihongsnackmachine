@@ -21,9 +21,9 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   return (
     <>
       <PageHeader
-        eyebrow="Contact"
-        title="Contact / Request a Quote"
-        description="Tell us what you need and our team will follow up with pricing and options. No prices are published online."
+        title="CONTACT US"
+        description={siteConfig.positioning}
+        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing and sales internally, with complete quality inspection instruments and an experienced production and service team."
       />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:px-8 md:grid-cols-[1fr_1.4fr]">
         <div className="space-y-6">

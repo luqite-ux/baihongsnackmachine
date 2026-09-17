@@ -20,8 +20,8 @@ export function SiteHeader() {
           </div>
         </div>
       </div>
-      <div className="mx-auto flex h-[78px] max-w-[1200px] items-center justify-between gap-5 px-4 lg:px-0">
-        <Logo />
+      <div data-testid="primary-header-row" className="mx-auto flex h-[76px] max-w-[1200px] items-center justify-between gap-5 px-4 md:h-[106px] lg:px-0">
+        <Logo imageClassName="h-14 w-auto object-contain md:h-[88px]" />
         <MainNav />
         <MobileNav />
       </div>

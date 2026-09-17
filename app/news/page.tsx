@@ -18,8 +18,13 @@ export default async function NewsPage() {
   const articles = await getPublishedArticles()
   return (
     <>
-      <PageHeader eyebrow="News" title="Company News" description="Updates from Baihong will be published here." />
+      <PageHeader
+        title="NEWS"
+        description={siteConfig.positioning}
+        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing and sales internally, with complete quality inspection instruments and an experienced production and service team."
+      />
       <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
+        <h2 className="mb-8 text-3xl font-black text-foreground">News and Information</h2>
         {articles.length === 0 ? (
           <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border bg-secondary/30 py-20 text-center">
             <Newspaper className="h-9 w-9 text-muted-foreground" aria-hidden="true" />

@@ -18,9 +18,10 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About Us"
-        title={siteConfig.legalNameEn}
+        title="ABOUT US"
         description={siteConfig.positioning}
+        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing and sales internally, with complete quality inspection instruments and an experienced production and service team."
+        variant="solid"
       />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
