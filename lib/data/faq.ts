@@ -6,34 +6,12 @@ import type { FaqItem } from "@/lib/types"
  * inquiry so real figures always come from a person, not this page.
  */
 export const faqItems: FaqItem[] = [
-  {
-    question: { en: "How do I get a price for a machine?" },
-    answer: {
-      en: "Submit the Request a Quote form or contact us by phone, WhatsApp or email with the product you're interested in and your quantity. We reply with pricing and options for your requirement.",
-    },
-  },
-  {
-    question: { en: "Can machines be customized?" },
-    answer: {
-      en: "Tell us your voltage, gas type, size or output requirement in the inquiry form and our team will confirm what can be configured for your order.",
-    },
-  },
-  {
-    question: { en: "Do you ship outside China?" },
-    answer: {
-      en: "Contact our team with your destination and order size so we can confirm shipping options and documentation for your location.",
-    },
-  },
-  {
-    question: { en: "What information should I include in an inquiry?" },
-    answer: {
-      en: "Please include the product or category you need, the quantity, your company name and the best way to reach you. This helps us respond with an accurate quotation.",
-    },
-  },
-  {
-    question: { en: "Can I visit or verify the factory?" },
-    answer: {
-      en: "Contact us directly to discuss a visit or verification call; our team will coordinate the details with you.",
-    },
-  },
+  { question: { en: "What specifications or models are available?" }, answer: { en: "There are many product specifications and models. Tell us which product you need so our team can confirm the available options and customization." } },
+  { question: { en: "Do you support customized size, material, color, or process?" }, answer: { en: "Size, material, color and process can be discussed according to the product and order requirements." } },
+  { question: { en: "Can you provide samples?" }, answer: { en: "Sample availability depends on the product. Contact our team with the model you need for confirmation." } },
+  { question: { en: "Do you provide technical data sheets or test reports?" }, answer: { en: "Technical parameter sheets are available. If you need a specific test report, contact our team to confirm what can be supplied for the selected product." } },
+  { question: { en: "What industries or applications are your products suitable for?" }, answer: { en: "The equipment is used in shopping malls, homes, restaurants, camping, catering and snack-food applications, depending on the selected model." } },
+  { question: { en: "Do you support OEM / ODM services?" }, answer: { en: "OEM and ODM requirements can be discussed with our team according to the product and order." } },
+  { question: { en: "What is the service life or performance advantage of the product?" }, answer: { en: "Performance and service life depend on the selected model, operating conditions and maintenance. Contact our team for the applicable technical information." } },
+  { question: { en: "What is the minimum order quantity (MOQ)?" }, answer: { en: "The old site listed an MOQ of 200. Please confirm the applicable quantity with our team for the specific product before ordering." } },
 ]

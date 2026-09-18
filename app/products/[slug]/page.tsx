@@ -87,18 +87,18 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       </nav>
 
       <div className="mx-auto max-w-4xl">
-        <div className="relative flex aspect-[16/9] items-center justify-center bg-white">
+        <div className="relative mx-auto h-[220px] w-full max-w-[520px] bg-white sm:h-[280px]">
           <Image
             src={product.image.src || "/placeholder.svg"}
             alt={resolveText(product.image.alt) || name}
             fill
-            sizes="(min-width: 1024px) 896px, 100vw"
-            className="object-contain p-6 sm:p-10"
+            sizes="(min-width: 640px) 520px, 100vw"
+            className="object-contain p-2 sm:p-4"
             priority
           />
         </div>
 
-          <div className="mt-8">
+          <div className="mt-5">
           <div className="text-center">
             {category && <p className="text-sm font-semibold uppercase tracking-wide text-primary">{resolveText(category.name)}</p>}
             <h1 className="mt-2 text-3xl font-bold text-foreground">{name}</h1>

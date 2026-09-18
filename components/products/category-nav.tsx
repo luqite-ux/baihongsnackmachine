@@ -52,7 +52,7 @@ export function CategoryNav({ categories }: { categories: ProductCategory[] }) {
             </Link>
 
             {category.subcategories.length > 0 && (
-              <ul data-hover-submenu={category.slug} className="invisible absolute left-full top-0 z-40 min-w-64 bg-[#f39a00] py-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <ul data-hover-submenu={category.slug} className="invisible absolute left-full top-0 z-40 hidden min-w-64 bg-[#f39a00] py-2 opacity-0 shadow-xl transition md:block md:group-hover:visible md:group-hover:opacity-100 md:group-focus-within:visible md:group-focus-within:opacity-100">
                 {category.subcategories.map((sub) => {
                   const isActiveSub = activeSub === sub.slug
                   return (

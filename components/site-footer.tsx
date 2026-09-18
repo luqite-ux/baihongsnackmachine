@@ -9,10 +9,14 @@ export function SiteFooter() {
   const copyrightOwner = siteConfig.legalNameEn.replace(/[.;:!?。；：！？\s]+$/u, "")
   const copyright = `© ${year} ${copyrightOwner}. All rights reserved.`
   const productLinks = [
-    { label: "Grill", href: "/products?category=grill" },
-    { label: "Aluminum Plate Category", href: "/products?category=aluminum-plate" },
-    { label: "Deep Fryer", href: "/products?category=deep-fryer" },
-    { label: "Popcorn Machine", href: "/products?category=popcorn-machine" },
+    { label: "Barbecue Grill", href: "/products?category=grill" },
+    { label: "Hamburger Grill", href: "/products?category=aluminum-plate" },
+    { label: "Sausage Oven", href: "/products?q=sausage" },
+    { label: "Bird Egg Grill", href: "/products?q=bird+egg" },
+    { label: "Octopus Ball Machine", href: "/products?q=octopus" },
+    { label: "Deep Fryer, Grill", href: "/products?category=deep-fryer" },
+    { label: "Popcorn Maker", href: "/products?category=popcorn-machine" },
+    { label: "Marshmallow Maker", href: "/products?q=marshmallow" },
   ]
 
   return (
@@ -39,7 +43,7 @@ export function SiteFooter() {
         </nav>
 
         <nav aria-label="Product category links" className="text-sm">
-          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Product Categories</h2>
+          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Main Products</h2>
           <ul className="mt-3 space-y-2">
             {productLinks.map((item) => (
               <li key={item.href}>
@@ -52,7 +56,7 @@ export function SiteFooter() {
         </nav>
 
         <div className="text-sm">
-          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Contact</h2>
+          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Contact Information</h2>
           <ul className="mt-3 space-y-3 text-white/65">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#f39a00]" aria-hidden="true" />

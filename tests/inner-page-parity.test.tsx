@@ -45,5 +45,16 @@ describe("legacy inner-page parity", () => {
     expect(detail).not.toContain("md:grid-cols-2")
     expect(detail).toContain("max-w-4xl")
     expect(detail).toContain("text-center")
+    expect(detail).toContain("max-w-[520px]")
+    expect(detail).not.toContain('aspect-[16/9]')
+  })
+
+  test("keeps the old product-page quality-service block and news-detail breadcrumb", () => {
+    const root = process.cwd()
+    const products = fs.readFileSync(path.join(root, "app/products/page.tsx"), "utf8")
+    const newsDetail = fs.readFileSync(path.join(root, "app/news/[slug]/page.tsx"), "utf8")
+
+    expect(products).toContain("QualityServiceSection")
+    expect(newsDetail).toContain('aria-label="Breadcrumb"')
   })
 })

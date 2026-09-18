@@ -5,7 +5,7 @@ import { bannerSlides } from "@/lib/data/banners"
 import type { Product, ProductCategory } from "@/lib/types"
 
 const categories: ProductCategory[] = [
-  { slug: "grill", name: { en: "Grill" }, description: { en: "Commercial grills" }, icon: "CookingPot", subcategories: [] },
+  { slug: "grill", name: { en: "Grill" }, description: { en: "Commercial grills" }, icon: "CookingPot", subcategories: [{ slug: "gas-grill", name: { en: "Gas Grill" } }] },
   { slug: "deep-fryer", name: { en: "Deep Fryer" }, description: { en: "Commercial fryers" }, icon: "Flame", subcategories: [] },
 ]
 
@@ -31,7 +31,6 @@ describe("legacy home sequence", () => {
     const orderedLabels = [
       "Popular Keywords",
       "Main Product Category",
-      "Years of Manufacturing Experience",
       "About Us",
       "BUSINESS ADVANTAGES",
       "Quality Service",
@@ -46,10 +45,12 @@ describe("legacy home sequence", () => {
     expect(screen.getAllByRole("link", { name: /Product [1-6]/ })).toHaveLength(6)
     expect(screen.getAllByRole("link", { name: "Grill" }).every((link) => link.getAttribute("href") === "/products?category=grill")).toBe(true)
     expect(screen.getByRole("searchbox", { name: /search products/i })).toBeVisible()
-    expect(screen.getByRole("link", { name: /view more/i })).toHaveAttribute("href", "/products")
+    expect(screen.getAllByRole("link", { name: /view more/i }).some((link) => link.getAttribute("href") === "/products")).toBe(true)
     expect(screen.getAllByText(/burger grills, sausage ovens, bird egg ovens/i).length).toBeGreaterThan(0)
     expect(screen.getAllByText(/stable production capacity and a comprehensive service system/i).length).toBeGreaterThan(0)
     expect(screen.getByRole("heading", { name: "Professional services started in 2013" })).toBeVisible()
     expect(screen.getByLabelText("Factory gallery")).toBeVisible()
+    expect(container.querySelectorAll('[data-home-hover-submenu].hidden')).not.toHaveLength(0)
+    expect(screen.getAllByText("2026-05-18")).toHaveLength(4)
   })
 })

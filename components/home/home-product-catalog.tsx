@@ -34,7 +34,7 @@ export function HomeProductCatalog({ categories, products }: { categories: Produ
                   <Link href={`/products?category=${category.slug}`} className="flex min-h-14 items-center justify-between border-b border-white px-4 text-sm font-bold text-neutral-900 transition-colors hover:bg-[#f39a00] hover:text-white group-hover:bg-[#f39a00] group-hover:text-white">
                     <span>{resolveText(category.name)}</span><ChevronRight className="h-4 w-4" aria-hidden="true" />
                   </Link>
-                  {category.subcategories.length > 0 && <ul className="invisible absolute left-full top-0 z-30 min-w-64 bg-[#f39a00] py-2 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                  {category.subcategories.length > 0 && <ul data-home-hover-submenu className="invisible absolute left-full top-0 z-30 hidden min-w-64 bg-[#f39a00] py-2 opacity-0 shadow-xl transition md:block md:group-hover:visible md:group-hover:opacity-100 md:group-focus-within:visible md:group-focus-within:opacity-100">
                     {category.subcategories.map((sub) => <li key={sub.slug}><Link href={`/products?category=${category.slug}&sub=${sub.slug}`} className="block px-4 py-3 text-sm font-bold text-white hover:bg-white hover:text-[#f39a00]">{resolveText(sub.name)}</Link></li>)}
                   </ul>}
                 </div>

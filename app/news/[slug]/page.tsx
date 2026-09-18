@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getArticleBySlug } from "@/lib/articles-db"
 import { siteConfig } from "@/lib/site-config"
@@ -44,13 +45,22 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   }
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+    <article className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <nav aria-label="Breadcrumb" className="mb-10 flex flex-wrap items-center gap-3 text-[14px] text-neutral-500">
+        <Link href="/" className="transition-colors hover:text-[#f39a00]">HOME</Link>
+        <span aria-hidden="true">›</span>
+        <Link href="/news" className="transition-colors hover:text-[#f39a00]">NEWS</Link>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">{article.title}</span>
+      </nav>
+      <div className="mx-auto max-w-3xl">
       <h1 className="text-3xl font-bold text-foreground">{article.title}</h1>
       {article.publishedAt && (
         <p className="mt-2 text-sm text-muted-foreground">{new Date(article.publishedAt).toLocaleDateString()}</p>
       )}
       {article.content && <div className="article-prose mt-8" dangerouslySetInnerHTML={{ __html: article.content }} />}
+      </div>
     </article>
   )
 }

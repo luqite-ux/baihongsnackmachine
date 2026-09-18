@@ -5,6 +5,7 @@ import { CategoryNav } from "@/components/products/category-nav"
 import { ProductDisplayHero } from "@/components/products/product-display-hero"
 import { ProductGridSkeleton } from "@/components/products/product-grid-skeleton"
 import { ProductPageIntro } from "@/components/products/product-page-intro"
+import { QualityServiceSection } from "@/components/quality-service-section"
 import { fetchCategories, fetchProducts } from "@/lib/products-db"
 import { siteConfig } from "@/lib/site-config"
 
@@ -50,6 +51,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           </Suspense>
         </div>
       </div>
+      <QualityServiceSection />
     </>
   )
 }

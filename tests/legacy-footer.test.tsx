@@ -9,8 +9,10 @@ describe("legacy footer contract", () => {
     const footer = screen.getByRole("contentinfo")
     expect(within(footer).getByRole("link", { name: /baihong home/i })).toHaveAttribute("href", "/")
     expect(within(footer).getByRole("heading", { name: "Quick Links" })).toBeVisible()
-    expect(within(footer).getByRole("heading", { name: "Product Categories" })).toBeVisible()
-    expect(within(footer).getByRole("link", { name: "Grill" })).toHaveAttribute("href", "/products?category=grill")
+    expect(within(footer).getByRole("heading", { name: "Main Products" })).toBeVisible()
+    expect(within(footer).getByRole("heading", { name: "Contact Information" })).toBeVisible()
+    expect(within(footer).getByRole("link", { name: "Barbecue Grill" })).toHaveAttribute("href", "/products?category=grill")
+    expect(within(footer).getByRole("link", { name: "Octopus Ball Machine" })).toBeVisible()
     expect(within(footer).getByRole("link", { name: /15252102737/ })).toHaveAttribute("href", "tel:+8615252102737")
     expect(within(footer).getByRole("link", { name: "info@baihongsnackmachine.com" })).toHaveAttribute(
       "href",
