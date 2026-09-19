@@ -7,13 +7,9 @@ import { CapabilitySection } from "@/components/home/capability-section"
 import { siteConfig } from "@/lib/site-config"
 import { getRequestLocale } from "@/lib/request-locale"
 import { localePath } from "@/lib/locale"
+import { buildLocaleAlternates } from "@/lib/seo-locale"
 
-export const metadata: Metadata = {
-  title: "About Us",
-  description: siteConfig.positioning,
-  alternates: { canonical: "/about" },
-  openGraph: { title: "About Us", description: siteConfig.positioning, url: "/about", type: "website" },
-}
+export async function generateMetadata(): Promise<Metadata> { const locale = await getRequestLocale(); const title = locale === "zh" ? "关于我们" : "About Us"; const description = locale === "zh" ? "了解徐州百泓厨房设备有限公司。" : siteConfig.positioning; return { title, description, alternates: buildLocaleAlternates("/about", locale), openGraph: { title, description, url: locale === "zh" ? "/zh/about" : "/about", type: "website" } } }
 
 export default async function AboutPage() {
   const locale = await getRequestLocale()

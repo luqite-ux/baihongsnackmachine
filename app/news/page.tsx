@@ -6,13 +6,9 @@ import { getPublishedArticles } from "@/lib/articles-db"
 import { siteConfig } from "@/lib/site-config"
 import { getRequestLocale } from "@/lib/request-locale"
 import { localePath } from "@/lib/locale"
+import { buildLocaleAlternates } from "@/lib/seo-locale"
 
-export const metadata: Metadata = {
-  title: "News",
-  description: "Company news and updates from Xuzhou Baihong Kitchen Equipment Co., Ltd.",
-  alternates: { canonical: "/news" },
-  openGraph: { title: "News", description: "Company news and updates from Xuzhou Baihong Kitchen Equipment Co., Ltd.", url: "/news", type: "website", images: [siteConfig.logo] },
-}
+export async function generateMetadata(): Promise<Metadata> { const locale = await getRequestLocale(); const title = locale === "zh" ? "新闻资讯" : "News"; const description = locale === "zh" ? "徐州百泓厨房设备有限公司新闻与动态。" : "Company news and updates from Xuzhou Baihong Kitchen Equipment Co., Ltd."; return { title, description, alternates: buildLocaleAlternates("/news", locale), openGraph: { title, description, url: locale === "zh" ? "/zh/news" : "/news", type: "website", images: [siteConfig.logo] } } }
 
 export const revalidate = 60
 

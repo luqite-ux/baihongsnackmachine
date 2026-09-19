@@ -3,12 +3,11 @@ import { ProductCatalog } from "@/components/product-catalog"
 import { fetchCategories, fetchProducts } from "@/lib/products-db"
 import { siteConfig } from "@/lib/site-config"
 import { getRequestLocale } from "@/lib/request-locale"
+import { buildLocaleAlternates } from "@/lib/seo-locale"
 
-export const metadata: Metadata = {
-  title: "Products",
-  description: "Browse Baihong commercial snack machines and kitchen equipment by category.",
-  alternates: { canonical: "/products" },
-  openGraph: { title: "Products", description: "Browse Baihong commercial snack machines and kitchen equipment by category.", url: "/products", type: "website", images: [siteConfig.logo] },
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getRequestLocale(); const title = locale === "zh" ? "产品中心" : "Products"; const description = locale === "zh" ? "按分类浏览百泓商用小吃机械与厨房设备。" : "Browse Baihong commercial snack machines and kitchen equipment by category."
+  return { title, description, alternates: buildLocaleAlternates("/products", locale), openGraph: { title, description, url: locale === "zh" ? "/zh/products" : "/products", type: "website", images: [siteConfig.logo] } }
 }
 
 interface ProductsPageProps {

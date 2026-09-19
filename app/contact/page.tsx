@@ -7,13 +7,9 @@ import { InquiryForm } from "@/components/contact/inquiry-form"
 import { siteConfig } from "@/lib/site-config"
 import { getRequestLocale } from "@/lib/request-locale"
 import { localePath } from "@/lib/locale"
+import { buildLocaleAlternates } from "@/lib/seo-locale"
 
-export const metadata: Metadata = {
-  title: "Contact / Request a Quote",
-  description: "Send Baihong your equipment requirement and get a quote from our team.",
-  alternates: { canonical: "/contact" },
-  openGraph: { title: "Contact / Request a Quote", description: "Send Baihong your equipment requirement and get a quote from our team.", url: "/contact", type: "website", images: [siteConfig.logo] },
-}
+export async function generateMetadata(): Promise<Metadata> { const locale = await getRequestLocale(); const title = locale === "zh" ? "联系我们 / 获取报价" : "Contact / Request a Quote"; const description = locale === "zh" ? "向百泓提交设备需求并获取报价。" : "Send Baihong your equipment requirement and get a quote from our team."; return { title, description, alternates: buildLocaleAlternates("/contact", locale), openGraph: { title, description, url: locale === "zh" ? "/zh/contact" : "/contact", type: "website", images: [siteConfig.logo] } } }
 
 interface ContactPageProps {
   searchParams: Promise<{ product?: string }>

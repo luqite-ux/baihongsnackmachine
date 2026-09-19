@@ -5,13 +5,9 @@ import { faqItems } from "@/lib/data/faq"
 import { localePath, resolveText } from "@/lib/locale"
 import { siteConfig } from "@/lib/site-config"
 import { getRequestLocale } from "@/lib/request-locale"
+import { buildLocaleAlternates } from "@/lib/seo-locale"
 
-export const metadata: Metadata = {
-  title: "FAQ",
-  description: "Answers to common questions about ordering from Baihong.",
-  alternates: { canonical: "/faq" },
-  openGraph: { title: "FAQ", description: "Answers to common questions about ordering from Baihong.", url: "/faq", type: "website", images: [siteConfig.logo] },
-}
+export async function generateMetadata(): Promise<Metadata> { const locale = await getRequestLocale(); const title = locale === "zh" ? "常见问题" : "FAQ"; const description = locale === "zh" ? "百泓产品与采购常见问题。" : "Answers to common questions about ordering from Baihong."; return { title, description, alternates: buildLocaleAlternates("/faq", locale), openGraph: { title, description, url: locale === "zh" ? "/zh/faq" : "/faq", type: "website", images: [siteConfig.logo] } } }
 
 export default async function FaqPage() {
   const locale = await getRequestLocale()
