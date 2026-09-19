@@ -3,6 +3,8 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { getArticleBySlug } from "@/lib/articles-db"
 import { siteConfig } from "@/lib/site-config"
+import { getRequestLocale } from "@/lib/request-locale"
+import { localePath } from "@/lib/locale"
 
 interface NewsDetailPageProps {
   params: Promise<{ slug: string }>
@@ -13,10 +15,11 @@ export const dynamicParams = true
 
 export async function generateMetadata({ params }: NewsDetailPageProps): Promise<Metadata> {
   const { slug } = await params
-  const article = await getArticleBySlug(slug)
+  const locale = await getRequestLocale()
+  const article = await getArticleBySlug(slug, locale)
   if (!article) return {}
   const description = article.excerpt || undefined
-  const url = `/news/${article.slug}`
+  const url = localePath(`/news/${article.slug}`, locale)
   return {
     title: article.title,
     description,
@@ -28,7 +31,8 @@ export async function generateMetadata({ params }: NewsDetailPageProps): Promise
 
 export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
   const { slug } = await params
-  const article = await getArticleBySlug(slug)
+  const locale = await getRequestLocale()
+  const article = await getArticleBySlug(slug, locale)
   if (!article) notFound()
 
   const articleSchema = {
@@ -48,9 +52,9 @@ export default async function NewsDetailPage({ params }: NewsDetailPageProps) {
     <article className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <nav aria-label="Breadcrumb" className="mb-10 flex flex-wrap items-center gap-3 text-[14px] text-neutral-500">
-        <Link href="/" className="transition-colors hover:text-[#f39a00]">HOME</Link>
+        <Link href={localePath("/", locale)} className="transition-colors hover:text-[#f39a00]">{locale === "zh" ? "首页" : "HOME"}</Link>
         <span aria-hidden="true">›</span>
-        <Link href="/news" className="transition-colors hover:text-[#f39a00]">NEWS</Link>
+        <Link href={localePath("/news", locale)} className="transition-colors hover:text-[#f39a00]">{locale === "zh" ? "新闻资讯" : "NEWS"}</Link>
         <span aria-hidden="true">›</span>
         <span aria-current="page">{article.title}</span>
       </nav>

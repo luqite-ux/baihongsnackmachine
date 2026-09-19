@@ -22,7 +22,7 @@ describe("legacy inner-page parity", () => {
     const about = fs.readFileSync(path.join(process.cwd(), "app/about/page.tsx"), "utf8")
 
     expect(about).toContain("The company was established in 2013")
-    expect(about).toContain("VIEW MORE &gt;")
+    expect(about).toContain('locale === "zh" ? "查看更多" : "VIEW MORE"')
     expect(about).toContain("CapabilitySection")
     expect(about).toContain("VIDEO PRESENTATION")
     expect(about).toContain("about-factory.jpg")

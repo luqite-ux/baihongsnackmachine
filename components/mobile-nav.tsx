@@ -7,10 +7,14 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { navItems } from "@/lib/nav"
 import { cn } from "@/lib/utils"
+import { localePath, stripLocalePrefix } from "@/lib/locale"
+import type { Locale } from "@/lib/types"
 
-export function MobileNav() {
+export function MobileNav({ locale }: { locale: Locale }) {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const plainPathname = stripLocalePrefix(pathname).pathname
+  const zhLabels: Record<string, string> = { Home: "首页", "About Us": "关于我们", Products: "产品中心", News: "新闻资讯", FAQ: "常见问题", Contact: "联系我们" }
 
   return (
     <div className="md:hidden">
@@ -33,11 +37,11 @@ export function MobileNav() {
         >
           <nav aria-label="Mobile" className="flex flex-col px-4 py-3">
             {navItems.map((item) => {
-              const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+              const isActive = item.href === "/" ? plainPathname === "/" : plainPathname.startsWith(item.href)
               return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={localePath(item.href, locale)}
                   onClick={() => setOpen(false)}
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
@@ -45,16 +49,16 @@ export function MobileNav() {
                     isActive && "text-[#f39a00]",
                   )}
                 >
-                  {item.label}
+                  {locale === "zh" ? zhLabels[item.label] : item.label}
                 </Link>
               )
             })}
             <Link
-              href="/contact"
+              href={localePath("/contact", locale)}
               onClick={() => setOpen(false)}
               className="mt-3 bg-[#f39a00] px-3 py-3 text-center text-sm font-bold uppercase text-white"
             >
-              Request a Quote
+              {locale === "zh" ? "获取报价" : "Request a Quote"}
             </Link>
           </nav>
         </div>

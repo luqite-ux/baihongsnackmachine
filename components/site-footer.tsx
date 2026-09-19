@@ -3,8 +3,10 @@ import { Mail, MapPin, Phone } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { navItems } from "@/lib/nav"
 import { siteConfig } from "@/lib/site-config"
+import { localePath } from "@/lib/locale"
+import type { Locale } from "@/lib/types"
 
-export function SiteFooter() {
+export function SiteFooter({ locale = "en" }: { locale?: Locale }) {
   const year = new Date().getFullYear()
   const copyrightOwner = siteConfig.legalNameEn.replace(/[.;:!?。；：！？\s]+$/u, "")
   const copyright = `© ${year} ${copyrightOwner}. All rights reserved.`
@@ -24,17 +26,17 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1200px] gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:px-0">
         <div>
           <div className="inline-flex bg-white p-2">
-            <Logo imageClassName="h-20 w-auto object-contain" />
+            <Logo locale={locale} imageClassName="h-20 w-auto object-contain" />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/65">{siteConfig.positioning}</p>
         </div>
 
         <nav aria-label="Footer" className="text-sm">
-          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Quick Links</h2>
+          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">{locale === "zh" ? "快速链接" : "Quick Links"}</h2>
           <ul className="mt-3 space-y-2">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-white/65 hover:text-[#f39a00]">
+                <Link href={localePath(item.href, locale)} className="text-white/65 hover:text-[#f39a00]">
                   {item.label}
                 </Link>
               </li>
@@ -43,11 +45,11 @@ export function SiteFooter() {
         </nav>
 
         <nav aria-label="Product category links" className="text-sm">
-          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Main Products</h2>
+          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">{locale === "zh" ? "主要产品" : "Main Products"}</h2>
           <ul className="mt-3 space-y-2">
             {productLinks.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-white/65 hover:text-[#f39a00]">
+                <Link href={localePath(item.href, locale)} className="text-white/65 hover:text-[#f39a00]">
                   {item.label}
                 </Link>
               </li>
@@ -56,7 +58,7 @@ export function SiteFooter() {
         </nav>
 
         <div className="text-sm">
-          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">Contact Information</h2>
+          <h2 className="border-l-2 border-[#f39a00] pl-3 text-base font-bold uppercase">{locale === "zh" ? "联系方式" : "Contact Information"}</h2>
           <ul className="mt-3 space-y-3 text-white/65">
             <li className="flex items-start gap-2">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-[#f39a00]" aria-hidden="true" />

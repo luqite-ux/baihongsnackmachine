@@ -5,8 +5,9 @@ import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { siteConfig } from "@/lib/site-config"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import type { Locale } from "@/lib/types"
 
-export function SiteHeader() {
+export function SiteHeader({ locale }: { locale: Locale }) {
   return (
     <header className="relative z-50 w-full border-b border-neutral-200 bg-white text-neutral-950">
       <div className="hidden border-b border-neutral-200 bg-white md:block">
@@ -17,14 +18,14 @@ export function SiteHeader() {
               <Phone className="ml-8 h-5 w-5" aria-hidden="true" />
               <span className="px-3 text-[17px]">Service Hotline： {siteConfig.phone}</span>
             </a>
-            <LanguageSwitcher />
+            <LanguageSwitcher locale={locale} />
           </div>
         </div>
       </div>
       <div data-testid="primary-header-row" className="mx-auto flex h-[76px] max-w-[1250px] items-center justify-between gap-8 px-6 md:h-[130px] lg:px-0">
-        <Logo imageClassName="h-14 w-auto object-contain md:h-[112px]" />
-        <MainNav />
-        <MobileNav />
+        <Logo locale={locale} imageClassName="h-14 w-auto object-contain md:h-[112px]" />
+        <MainNav locale={locale} />
+        <MobileNav locale={locale} />
       </div>
     </header>
   )

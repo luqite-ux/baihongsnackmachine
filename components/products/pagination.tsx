@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { cn } from "@/lib/utils"
+import { localePath } from "@/lib/locale"
+import type { Locale } from "@/lib/types"
 
 function buildHref(params: Record<string, string | undefined>, page: number) {
   const search = new URLSearchParams()
@@ -17,12 +19,14 @@ export function ProductPagination({
   category,
   sub,
   search,
+  locale,
 }: {
   page: number
   totalPages: number
   category?: string
   sub?: string
   search?: string
+  locale: Locale
 }) {
   if (totalPages <= 1) return null
 
@@ -31,7 +35,7 @@ export function ProductPagination({
   return (
     <nav aria-label="Product pages" className="mt-9 flex items-center justify-center gap-2">
       <Link
-        href={buildHref(params, Math.max(1, page - 1))}
+        href={localePath(buildHref(params, Math.max(1, page - 1)), locale)}
         scroll={false}
         aria-disabled={page === 1}
         aria-label="Previous page"
@@ -40,7 +44,7 @@ export function ProductPagination({
           page === 1 && "pointer-events-none opacity-40",
         )}
       >
-        Prev
+        {locale === "zh" ? "上一页" : "Prev"}
       </Link>
 
       <span aria-current="page" className="flex h-9 min-w-9 items-center justify-center border border-[#f39a00] bg-[#f39a00] px-3 text-sm font-bold text-white">
@@ -48,7 +52,7 @@ export function ProductPagination({
       </span>
 
       <Link
-        href={buildHref(params, Math.min(totalPages, page + 1))}
+        href={localePath(buildHref(params, Math.min(totalPages, page + 1)), locale)}
         scroll={false}
         aria-disabled={page === totalPages}
         aria-label="Next page"
@@ -57,7 +61,7 @@ export function ProductPagination({
           page === totalPages && "pointer-events-none opacity-40",
         )}
       >
-        Next
+        {locale === "zh" ? "下一页" : "Next"}
       </Link>
     </nav>
   )

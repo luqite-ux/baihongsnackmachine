@@ -29,6 +29,7 @@ export type ProductRow = {
 }
 
 type CategoryRow = {
+  id: string
   parent_id?: string | null
   slug: string | null
   name: string | null
@@ -36,6 +37,49 @@ type CategoryRow = {
   description: string | null
   description_i18n: LocalizedText | null
   extra_data: Record<string, unknown> | null
+}
+
+export function mapCategoryHierarchy(rows: CategoryRow[]): ProductCategory[] {
+  const childrenByParent = new Map<string, CategoryRow[]>()
+  for (const row of rows) {
+    if (!row.parent_id) continue
+    const children = childrenByParent.get(row.parent_id) || []
+    children.push(row)
+    childrenByParent.set(row.parent_id, children)
+  }
+
+  return rows.filter((row) => !row.parent_id).map((row) => {
+    const childRows = childrenByParent.get(row.id) || []
+    const embedded = Array.isArray(row.extra_data?.subcategories)
+      ? (row.extra_data?.subcategories as Array<{ slug?: string; name?: string }>).flatMap((item) =>
+          item.slug && item.name ? [{ slug: item.slug, name: { en: item.name } }] : [],
+        )
+      : []
+    const subcategories = childRows.length > 0
+      ? childRows.map((child) => ({ slug: child.slug || "subcategory", name: localized(child.name_i18n, child.name || "Subcategory") }))
+      : embedded
+
+    return {
+      slug: row.slug || "category",
+      name: localized(row.name_i18n, row.name || "Category"),
+      description: localized(row.description_i18n, row.description || ""),
+      icon: typeof row.extra_data?.icon === "string" ? row.extra_data.icon : "CookingPot",
+      subcategories,
+    }
+  })
+}
+
+type CategoryFilterRow = Pick<CategoryRow, "id" | "parent_id" | "slug" | "extra_data">
+
+export function categoryFilterSlugs(rows: CategoryFilterRow[], category: string, subcategory?: string): string[] {
+  const root = rows.find((row) => !row.parent_id && row.slug === category)
+  if (!root) return [category]
+  const children = rows.filter((row) => row.parent_id === root.id)
+  if (subcategory) {
+    const child = children.find((row) => row.slug === subcategory || row.extra_data?.public_slug === subcategory)
+    return child?.slug ? [child.slug] : [subcategory]
+  }
+  return [root.slug || category, ...children.flatMap((row) => row.slug ? [row.slug] : [])]
 }
 
 function localized(value: LocalizedText | null, fallback: string): LocalizedText {
@@ -47,7 +91,10 @@ export function mapProduct(row: ProductRow): Product {
   const extra = row.extra_data || {}
   const width = typeof extra.image_width === "number" ? extra.image_width : 1000
   const height = typeof extra.image_height === "number" ? extra.image_height : 1000
-  const subcategorySlug = typeof extra.subcategory === "string" ? extra.subcategory : undefined
+  const subcategorySlug = typeof extra.public_subcategory === "string"
+    ? extra.public_subcategory
+    : typeof extra.subcategory === "string" ? extra.subcategory : undefined
+  const categorySlug = typeof extra.parent_category === "string" ? extra.parent_category : row.category_slug || "uncategorized"
   const name = localized(row.name_i18n, row.name || "Commercial Food Machine")
   const rawImages = Array.isArray(extra.images) ? extra.images.filter((item): item is string => typeof item === "string" && item.length > 0) : []
   const imageSources = Array.from(new Set([row.image_url, ...rawImages].filter((item): item is string => Boolean(item))))
@@ -55,7 +102,7 @@ export function mapProduct(row: ProductRow): Product {
   return {
     slug: row.slug || "product",
     name,
-    categorySlug: row.category_slug || "uncategorized",
+    categorySlug,
     subcategorySlug,
     summary: localized(row.description_i18n, row.description || ""),
     description: localized(row.description_i18n, row.description || ""),
@@ -85,12 +132,15 @@ export async function fetchProducts(filters: ProductFilters = {}): Promise<Produ
     .eq("tenant_id", tenantId)
     .eq("is_active", true)
   if (filters.category) {
-    countQuery = countQuery.eq("category_slug", filters.category)
-    dataQuery = dataQuery.eq("category_slug", filters.category)
-  }
-  if (filters.subcategory) {
-    countQuery = countQuery.contains("extra_data", { subcategory: filters.subcategory })
-    dataQuery = dataQuery.contains("extra_data", { subcategory: filters.subcategory })
+    const { data: categoryRows, error: categoryError } = await db
+      .from("product_categories")
+      .select("id,parent_id,slug,extra_data")
+      .eq("tenant_id", tenantId)
+      .eq("is_active", true)
+    if (categoryError) throw new Error(`Unable to resolve product category: ${categoryError.message}`)
+    const slugs = categoryFilterSlugs(categoryRows as CategoryFilterRow[], filters.category, filters.subcategory)
+    countQuery = countQuery.in("category_slug", slugs)
+    dataQuery = dataQuery.in("category_slug", slugs)
   }
   if (filters.search?.trim()) {
     const term = `%${filters.search.trim().replaceAll("%", "")}%`
@@ -134,24 +184,10 @@ export async function fetchCategories(): Promise<ProductCategory[]> {
   if (!db || !tenantId) return []
   const { data, error } = await db
     .from("product_categories")
-    .select("slug,name,name_i18n,description,description_i18n,extra_data,parent_id")
+    .select("id,slug,name,name_i18n,description,description_i18n,extra_data,parent_id")
     .eq("tenant_id", tenantId)
     .eq("is_active", true)
-    .is("parent_id", null)
     .order("sort_order")
   if (error) throw new Error(`Unable to load categories: ${error.message}`)
-  return (data as CategoryRow[]).map((row) => {
-    const subcategories = Array.isArray(row.extra_data?.subcategories)
-      ? (row.extra_data?.subcategories as Array<{ slug?: string; name?: string }>).flatMap((item) =>
-          item.slug && item.name ? [{ slug: item.slug, name: { en: item.name } }] : [],
-        )
-      : []
-    return {
-      slug: row.slug || "category",
-      name: localized(row.name_i18n, row.name || "Category"),
-      description: localized(row.description_i18n, row.description || ""),
-      icon: typeof row.extra_data?.icon === "string" ? row.extra_data.icon : "CookingPot",
-      subcategories,
-    }
-  })
+  return mapCategoryHierarchy(data as CategoryRow[])
 }

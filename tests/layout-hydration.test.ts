@@ -6,6 +6,6 @@ describe("root layout hydration contract", () => {
   test("allows Vercel's deployment attribute on the html root", () => {
     const layoutSource = readFileSync(join(process.cwd(), "app/layout.tsx"), "utf8")
 
-    expect(layoutSource).toContain('<html lang="en" suppressHydrationWarning>')
+    expect(layoutSource).toContain('<html lang={locale === "zh" ? "zh-CN" : "en"} suppressHydrationWarning>')
   })
 })

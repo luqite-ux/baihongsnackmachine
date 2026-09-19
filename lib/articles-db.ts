@@ -1,4 +1,5 @@
 import { getSupabaseClient, getTenantId } from "@/lib/supabase"
+import type { Locale } from "@/lib/types"
 
 export type PublishedArticle = {
   slug: string
@@ -10,11 +11,11 @@ export type PublishedArticle = {
   featuredImage: string | null
 }
 
-function pick(value: Record<string, string> | null, fallback: string | null) {
-  return value?.en || value?.zh || fallback || ""
+function pick(value: Record<string, string> | null, fallback: string | null, locale: Locale) {
+  return value?.[locale] || value?.en || value?.zh || fallback || ""
 }
 
-export async function getPublishedArticles(limit?: number): Promise<PublishedArticle[]> {
+export async function getPublishedArticles(limit?: number, locale: Locale = "en"): Promise<PublishedArticle[]> {
   const db = getSupabaseClient()
   const tenantId = getTenantId()
   if (!db || !tenantId) return []
@@ -29,15 +30,15 @@ export async function getPublishedArticles(limit?: number): Promise<PublishedArt
   if (error) throw new Error(`Unable to load news: ${error.message}`)
   return (data || []).map((row) => ({
     slug: row.slug || "",
-    title: pick(row.title_i18n, row.title),
-    excerpt: pick(row.excerpt_i18n, row.excerpt),
-    content: pick(row.content_i18n, row.content),
+    title: pick(row.title_i18n, row.title, locale),
+    excerpt: pick(row.excerpt_i18n, row.excerpt, locale),
+    content: pick(row.content_i18n, row.content, locale),
     publishedAt: row.published_at || "",
     updatedAt: row.updated_at || row.published_at || "",
     featuredImage: row.featured_image,
   }))
 }
 
-export async function getArticleBySlug(slug: string) {
-  return (await getPublishedArticles()).find((article) => article.slug === slug) || null
+export async function getArticleBySlug(slug: string, locale: Locale = "en") {
+  return (await getPublishedArticles(undefined, locale)).find((article) => article.slug === slug) || null
 }

@@ -5,6 +5,8 @@ import { Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { InquiryForm } from "@/components/contact/inquiry-form"
 import { siteConfig } from "@/lib/site-config"
+import { getRequestLocale } from "@/lib/request-locale"
+import { localePath } from "@/lib/locale"
 
 export const metadata: Metadata = {
   title: "Contact / Request a Quote",
@@ -19,17 +21,18 @@ interface ContactPageProps {
 
 export default async function ContactPage({ searchParams }: ContactPageProps) {
   const { product } = await searchParams
+  const locale = await getRequestLocale()
 
   return (
     <>
       <PageHeader
-        title="CONTACT US"
-        description="A manufacturer specializing in the design, production, and processing of food machinery"
+        title={locale === "zh" ? "联系我们" : "CONTACT US"}
+        description={locale === "zh" ? "专注于食品机械设计、生产与加工的制造商" : "A manufacturer specializing in the design, production, and processing of food machinery"}
         secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."
       />
       <div className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
         <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-4 text-[14px] text-neutral-500">
-          <Link href="/" className="transition-colors hover:text-[#f39a00]">HOME</Link><span aria-hidden="true">›</span><span>CONTACT</span>
+          <Link href={localePath("/", locale)} className="transition-colors hover:text-[#f39a00]">{locale === "zh" ? "首页" : "HOME"}</Link><span aria-hidden="true">›</span><span>{locale === "zh" ? "联系我们" : "CONTACT"}</span>
         </nav>
         <div className="grid gap-12 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
           <div className="space-y-8 px-4 text-center md:px-8">
@@ -61,8 +64,8 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           </div>
 
           <div>
-            <h2 className="mb-6 text-[24px] font-black text-neutral-950">Quick Message</h2>
-            <InquiryForm defaultProduct={product} />
+            <h2 className="mb-6 text-[24px] font-black text-neutral-950">{locale === "zh" ? "快速留言" : "Quick Message"}</h2>
+            <InquiryForm defaultProduct={product} locale={locale} />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { siteConfig } from "@/lib/site-config"
 import "./globals.css"
+import { getRequestLocale } from "@/lib/request-locale"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -64,19 +65,20 @@ function OrganizationStructuredData() {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getRequestLocale()
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale === "zh" ? "zh-CN" : "en"} suppressHydrationWarning>
       <body className="font-sans antialiased">
         <OrganizationStructuredData />
         <div className="flex min-h-screen flex-col">
-          <SiteHeader />
+          <SiteHeader locale={locale} />
           <main className="flex-1">{children}</main>
-          <SiteFooter />
+          <SiteFooter locale={locale} />
         </div>
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

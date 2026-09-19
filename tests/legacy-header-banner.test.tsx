@@ -23,10 +23,8 @@ describe("legacy header and banner contract", () => {
     expect(screen.getByTestId("primary-header-row")).not.toHaveClass("max-w-[1740px]")
     expect(screen.getByAltText("BAIHONG logo")).toHaveClass("md:h-[112px]")
     fireEvent.click(screen.getByRole("button", { name: /English/i }))
-    expect(screen.getByRole("menuitem", { name: "日本語" })).toBeVisible()
-    expect(screen.getByRole("menuitem", { name: "한국어" })).toBeVisible()
-    expect(screen.getByRole("menuitem", { name: "Español" })).toBeVisible()
-    expect(screen.getByRole("menuitem", { name: "Русский" })).toBeVisible()
+    expect(screen.getByRole("menuitem", { name: "简体中文" })).toHaveAttribute("href", "/zh")
+    expect(screen.queryByRole("menuitem", { name: "日本語" })).not.toBeInTheDocument()
   })
 
   test("uses the original banner artwork without replacement quote CTAs", () => {

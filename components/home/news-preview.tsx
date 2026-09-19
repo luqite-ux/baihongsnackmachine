@@ -3,18 +3,20 @@ import { Newspaper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/motion/reveal"
 import { getPublishedArticles } from "@/lib/articles-db"
+import { localePath } from "@/lib/locale"
+import type { Locale } from "@/lib/types"
 
-export async function NewsPreview() {
-  const articles = await getPublishedArticles(3)
+export async function NewsPreview({ locale }: { locale: Locale }) {
+  const articles = await getPublishedArticles(3, locale)
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <Reveal className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wide text-primary">News</p>
-          <h2 className="mt-2 text-2xl font-bold text-foreground sm:text-3xl">Company News</h2>
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary">{locale === "zh" ? "新闻" : "News"}</p>
+          <h2 className="mt-2 text-2xl font-bold text-foreground sm:text-3xl">{locale === "zh" ? "公司新闻" : "Company News"}</h2>
         </div>
         <Button asChild variant="outline">
-          <Link href="/news">View All News</Link>
+          <Link href={localePath("/news", locale)}>{locale === "zh" ? "查看全部新闻" : "View All News"}</Link>
         </Button>
       </Reveal>
 

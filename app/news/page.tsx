@@ -4,6 +4,8 @@ import { Newspaper } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { getPublishedArticles } from "@/lib/articles-db"
 import { siteConfig } from "@/lib/site-config"
+import { getRequestLocale } from "@/lib/request-locale"
+import { localePath } from "@/lib/locale"
 
 export const metadata: Metadata = {
   title: "News",
@@ -15,7 +17,8 @@ export const metadata: Metadata = {
 export const revalidate = 60
 
 export default async function NewsPage() {
-  const articles = await getPublishedArticles()
+  const locale = await getRequestLocale()
+  const articles = await getPublishedArticles(undefined, locale)
   return (
     <>
       <PageHeader
@@ -25,9 +28,9 @@ export default async function NewsPage() {
       />
       <div className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
         <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-4 text-[14px] text-neutral-500">
-          <Link href="/" className="transition-colors hover:text-[#f39a00]">HOME</Link><span aria-hidden="true">›</span><span>NEWS</span>
+          <Link href={localePath("/", locale)} className="transition-colors hover:text-[#f39a00]">{locale === "zh" ? "首页" : "HOME"}</Link><span aria-hidden="true">›</span><span>{locale === "zh" ? "新闻资讯" : "NEWS"}</span>
         </nav>
-        <h2 className="mb-9 text-[38px] font-black text-neutral-950">News and Information</h2>
+        <h2 className="mb-9 text-[38px] font-black text-neutral-950">{locale === "zh" ? "新闻与资讯" : "News and Information"}</h2>
         {articles.length === 0 ? (
           <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border bg-secondary/30 py-20 text-center">
             <Newspaper className="h-9 w-9 text-muted-foreground" aria-hidden="true" />
@@ -41,11 +44,11 @@ export default async function NewsPage() {
             {articles.map((article) => (
               <li key={article.slug} className="flex min-h-[235px] flex-col bg-white p-7 shadow-[0_5px_24px_rgba(0,0,0,0.07)]">
                 {article.publishedAt && <time className="text-[15px] font-bold text-neutral-500">{new Date(article.publishedAt).toISOString().slice(0, 10)}</time>}
-                <Link href={`/news/${article.slug}`} className="hover:text-primary">
+                <Link href={localePath(`/news/${article.slug}`, locale)} className="hover:text-primary">
                   <h3 className="mt-5 line-clamp-3 text-[18px] font-bold leading-6 text-neutral-950">{article.title}</h3>
                 </Link>
                 {article.excerpt && <p className="mt-3 line-clamp-2 text-sm leading-5 text-neutral-600">{article.excerpt}</p>}
-                <Link href={`/news/${article.slug}`} className="mt-auto pt-5 text-sm font-bold text-[#f39a00]">more &gt;</Link>
+                <Link href={localePath(`/news/${article.slug}`, locale)} className="mt-auto pt-5 text-sm font-bold text-[#f39a00]">{locale === "zh" ? "更多" : "more"} &gt;</Link>
               </li>
             ))}
           </ul>

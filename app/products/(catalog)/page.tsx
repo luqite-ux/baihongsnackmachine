@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { ProductCatalog } from "@/components/product-catalog"
 import { fetchCategories, fetchProducts } from "@/lib/products-db"
 import { siteConfig } from "@/lib/site-config"
+import { getRequestLocale } from "@/lib/request-locale"
 
 export const metadata: Metadata = {
   title: "Products",
@@ -17,6 +18,7 @@ interface ProductsPageProps {
 const PAGE_SIZE = 6
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
+  const locale = await getRequestLocale()
   const params = await searchParams
   const categories = await fetchCategories()
   const activeCategory = params.category ? categories.find((item) => item.slug === params.category) : undefined
@@ -30,5 +32,5 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const search = params.q?.trim()
   const data = await fetchProducts({ category, subcategory: sub, search, page, pageSize: PAGE_SIZE })
 
-  return <ProductCatalog data={data} activeCategory={activeCategory} category={category} sub={sub} search={search} />
+  return <ProductCatalog data={data} activeCategory={activeCategory} category={category} sub={sub} search={search} locale={locale} />
 }
