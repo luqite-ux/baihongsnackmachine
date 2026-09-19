@@ -1,0 +1,65 @@
+{
+  "baselineId": "baihongsnackmachine-clouddream-public-2026-09-18",
+  "revision": "fb96a972d1407c6c5b129839a84465eaf2c62d9d",
+  "expected": {
+    "routes": ["/", "/products", "/products/[slug]", "/news", "/news/[slug]", "/faq", "/contact", "/zh", "/zh/products", "/zh/products/[slug]", "/zh/news", "/zh/news/[slug]", "/zh/faq", "/zh/contact"],
+    "assets": ["brand-logo", "home-banners", "product-display-banner", "product-images", "factory-gallery", "article-covers"],
+    "content": ["header-and-language-menu", "home-sections", "product-taxonomy", "product-records", "article-records", "contact-and-footer", "bilingual-metadata"]
+  },
+  "actual": {
+    "routes": ["/", "/products", "/products/[slug]", "/news", "/news/[slug]", "/faq", "/contact", "/zh", "/zh/products", "/zh/products/[slug]", "/zh/news", "/zh/news/[slug]", "/zh/faq", "/zh/contact"],
+    "assets": ["brand-logo", "home-banners", "product-display-banner", "product-images", "factory-gallery", "article-covers"],
+    "content": ["header-and-language-menu", "home-sections", "product-taxonomy", "product-records", "article-records", "contact-and-footer", "bilingual-metadata"]
+  },
+  "discoveryEvidence": "audit-report-2026-09-18.md",
+  "backendEvidence": "evidence/backend-bilingual-audit-2026-09-19.md",
+  "requiredStates": [
+    {"route":"/","state":"default","viewport":"desktop"},{"route":"/","state":"default","viewport":"mobile"},
+    {"route":"/products","state":"default","viewport":"desktop"},{"route":"/products","state":"default","viewport":"mobile"},
+    {"route":"/products/[slug]","state":"default","viewport":"desktop"},{"route":"/products/[slug]","state":"default","viewport":"mobile"},
+    {"route":"/news","state":"default","viewport":"desktop"},{"route":"/news","state":"default","viewport":"mobile"},
+    {"route":"/news/[slug]","state":"default","viewport":"desktop"},{"route":"/news/[slug]","state":"default","viewport":"mobile"},
+    {"route":"/faq","state":"default","viewport":"desktop"},{"route":"/faq","state":"default","viewport":"mobile"},
+    {"route":"/contact","state":"default","viewport":"desktop"},{"route":"/contact","state":"default","viewport":"mobile"},
+    {"route":"/zh","state":"default","viewport":"desktop"},{"route":"/zh","state":"default","viewport":"mobile"},
+    {"route":"/zh/products","state":"default","viewport":"desktop"},{"route":"/zh/products","state":"default","viewport":"mobile"},
+    {"route":"/zh/products/[slug]","state":"default","viewport":"desktop"},{"route":"/zh/products/[slug]","state":"default","viewport":"mobile"},
+    {"route":"/zh/news","state":"default","viewport":"desktop"},{"route":"/zh/news","state":"default","viewport":"mobile"},
+    {"route":"/zh/news/[slug]","state":"default","viewport":"desktop"},{"route":"/zh/news/[slug]","state":"default","viewport":"mobile"},
+    {"route":"/zh/faq","state":"default","viewport":"desktop"},{"route":"/zh/faq","state":"default","viewport":"mobile"},
+    {"route":"/zh/contact","state":"default","viewport":"desktop"},{"route":"/zh/contact","state":"default","viewport":"mobile"}
+  ],
+  "checks": [
+    {"route":"/","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/products","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/products","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/products/[slug]","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/products/[slug]","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/news","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/news","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/news/[slug]","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/news/[slug]","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/faq","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/faq","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/contact","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/contact","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/products","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/products","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/products/[slug]","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/products/[slug]","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/news","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/news","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/news/[slug]","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/news/[slug]","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/faq","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/faq","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/contact","state":"default","viewport":"desktop","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"},
+    {"route":"/zh/contact","state":"default","viewport":"mobile","baselineId":"baihongsnackmachine-clouddream-public-2026-09-18","revision":"fb96a972d1407c6c5b129839a84465eaf2c62d9d","verdict":"PASS","findings":[],"sourceEvidence":"audit-report-2026-09-18.md","targetEvidence":"evidence/browser-bilingual-audit-2026-09-19.md"}
+  ],
+  "deviations": [
+    {"id":"formal-en-zh-expansion","reason":"The source site was English-first; the user explicitly requested formal English and Simplified Chinese operation while retaining source-site design parity.","basis":"user_instruction","evidence":"status.md"}
+  ]
+}
