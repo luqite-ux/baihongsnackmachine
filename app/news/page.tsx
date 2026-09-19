@@ -18,9 +18,9 @@ export default async function NewsPage() {
   return (
     <>
       <PageHeader
-        title="NEWS"
-        description="A manufacturer specializing in the design, production, and processing of food machinery"
-        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."
+        title={locale === "zh" ? "新闻资讯" : "NEWS"}
+        description={locale === "zh" ? "专注于食品机械设计、生产与加工的制造商" : "A manufacturer specializing in the design, production, and processing of food machinery"}
+        secondaryDescription={locale === "zh" ? "引进设备与技术，集研发、制造和销售于一体，配备质量检测仪器，并拥有经验丰富的工程、生产及售后服务团队。" : "Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."}
       />
       <div className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
         <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-4 text-[14px] text-neutral-500">
@@ -31,8 +31,7 @@ export default async function NewsPage() {
           <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border bg-secondary/30 py-20 text-center">
             <Newspaper className="h-9 w-9 text-muted-foreground" aria-hidden="true" />
             <p className="max-w-sm text-sm text-muted-foreground">
-              No news articles have been published yet. Please check back soon, or contact us directly for the
-              latest updates.
+              {locale === "zh" ? "暂未发布新闻，欢迎稍后查看或直接联系我们了解最新动态。" : "No news articles have been published yet. Please check back soon, or contact us directly for the latest updates."}
             </p>
           </div>
         ) : (

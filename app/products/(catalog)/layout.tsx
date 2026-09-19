@@ -14,9 +14,9 @@ export default async function ProductCatalogLayout({ children }: { children: Rea
 
   return (
     <>
-      <ProductDisplayHero />
+      <ProductDisplayHero locale={locale} />
       <div className="mx-auto max-w-[1248px] px-4 py-12 lg:px-0">
-        <ProductPageIntro />
+        <ProductPageIntro locale={locale} />
         <div className="grid gap-7 md:grid-cols-[255px_1fr]">
           <aside className="md:self-start">
             <Suspense fallback={<div className="h-[560px] bg-[#f3f3f3]" aria-hidden="true" />}>
@@ -26,7 +26,7 @@ export default async function ProductCatalogLayout({ children }: { children: Rea
           <Suspense fallback={<ProductGridSkeleton />}>{children}</Suspense>
         </div>
       </div>
-      <QualityServiceSection />
+      <QualityServiceSection locale={locale} />
     </>
   )
 }

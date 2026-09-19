@@ -24,7 +24,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       <PageHeader
         title={locale === "zh" ? "联系我们" : "CONTACT US"}
         description={locale === "zh" ? "专注于食品机械设计、生产与加工的制造商" : "A manufacturer specializing in the design, production, and processing of food machinery"}
-        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."
+        secondaryDescription={locale === "zh" ? "引进设备与技术，集研发、制造和销售于一体，配备质量检测仪器，并拥有经验丰富的工程、生产及售后服务团队。" : "Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."}
       />
       <div className="mx-auto max-w-[1248px] px-5 py-14 md:px-6 lg:px-0">
         <nav aria-label="Breadcrumb" className="mb-8 flex items-center gap-4 text-[14px] text-neutral-500">
@@ -37,13 +37,13 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
                 <a href={siteConfig.phoneHref} className="hover:text-primary">
-                  {siteConfig.phone} (Phone / WhatsApp)
+                  {siteConfig.phone} ({locale === "zh" ? "电话 / WhatsApp" : "Phone / WhatsApp"})
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
                 <a href={siteConfig.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-                  Chat on WhatsApp
+                  {locale === "zh" ? "通过 WhatsApp 联系" : "Chat on WhatsApp"}
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -54,7 +54,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                <span>{siteConfig.address}</span>
+                <span>{locale === "zh" ? "江苏省徐州市铜山区郑集镇代楼村三组" : siteConfig.address}</span>
               </li>
             </ul>
           </div>
@@ -68,12 +68,12 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
       <section className="bg-neutral-950 py-16 text-center text-white">
         <div className="mx-auto max-w-[1100px] px-5">
-          <p className="text-[22px] font-bold text-[#f39a00]">QUALITY SERVICE</p>
-          <h2 className="mt-2 text-[34px] font-black">Provide personalized solutions based on customer needs</h2>
-          <p className="mx-auto mt-6 max-w-5xl text-[16px] font-semibold leading-7 text-white/85">We have stable production capacity and a comprehensive service system, and our products are widely used in various catering and food processing scenarios. We have been deeply involved in the industry for many years, winning the trust of customers with reliable quality and efficient response. We are your high-quality partner for customizing kitchen equipment.</p>
+          <p className="text-[22px] font-bold text-[#f39a00]">{locale === "zh" ? "品质服务" : "QUALITY SERVICE"}</p>
+          <h2 className="mt-2 text-[34px] font-black">{locale === "zh" ? "根据客户需求提供个性化解决方案" : "Provide personalized solutions based on customer needs"}</h2>
+          <p className="mx-auto mt-6 max-w-5xl text-[16px] font-semibold leading-7 text-white/85">{locale === "zh" ? "我们具备稳定的生产能力和完善的服务体系，产品广泛应用于餐饮及食品加工场景。团队深耕行业多年，以可靠品质和及时响应服务客户，是厨房设备定制合作伙伴。" : "We have stable production capacity and a comprehensive service system, and our products are widely used in various catering and food processing scenarios. We have been deeply involved in the industry for many years, winning the trust of customers with reliable quality and efficient response. We are your high-quality partner for customizing kitchen equipment."}</p>
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href={siteConfig.phoneHref} className="bg-[#f39a00] px-7 py-3 font-bold text-white">{siteConfig.phone} · Welcome to negotiate</a>
-            <a href={siteConfig.emailHref} className="border border-white/70 px-7 py-3 font-bold text-white">{siteConfig.email} · Send email information</a>
+            <a href={siteConfig.phoneHref} className="bg-[#f39a00] px-7 py-3 font-bold text-white">{siteConfig.phone} · {locale === "zh" ? "欢迎洽谈" : "Welcome to negotiate"}</a>
+            <a href={siteConfig.emailHref} className="border border-white/70 px-7 py-3 font-bold text-white">{siteConfig.email} · {locale === "zh" ? "发送邮件资料" : "Send email information"}</a>
           </div>
         </div>
       </section>

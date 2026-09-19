@@ -18,7 +18,7 @@ export default async function AboutPage() {
       <PageHeader
         title={locale === "zh" ? "关于我们" : "ABOUT US"}
         description={locale === "zh" ? "专注于食品机械设计、生产与加工的制造商" : "A manufacturer specializing in the design, production, and processing of food machinery"}
-        secondaryDescription="Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."
+        secondaryDescription={locale === "zh" ? "引进设备与技术，集研发、制造和销售于一体，配备质量检测仪器，并拥有经验丰富的工程、生产及售后服务团队。" : "Introducing advanced technology, integrating research and development, manufacturing, and sales internally, possessing comprehensive quality inspection and testing instruments, experienced engineers, and a production and after-sales service team with over 10 years of experience."}
       />
 
       <section className="mx-auto max-w-[1248px] px-5 py-16 md:px-6 lg:px-0">
