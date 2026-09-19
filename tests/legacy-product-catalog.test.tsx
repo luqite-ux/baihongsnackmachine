@@ -52,10 +52,12 @@ describe("legacy product catalogue", () => {
     expect(screen.getByRole("heading", { name: "PRODUCT DISPLAY" })).toBeVisible()
     expect(screen.getByText(/Introducing advanced technology, integrating research and development/i)).toBeVisible()
     expect(screen.getByRole("img", { name: "Baihong product range" })).toHaveAttribute("src", expect.stringContaining("product-display-collage.png"))
-    expect(screen.getAllByRole("navigation", { name: "Product categories" })[0]).toHaveClass("bg-[#f3f3f3]")
-    expect(screen.getAllByRole("link", { name: "Gas Grill" }).every((link) => link.getAttribute("href") === "/products?category=grill&sub=gas-grill")).toBe(true)
-    expect(screen.getAllByRole("navigation", { name: "Product categories" })[0].querySelector('[data-hover-submenu="grill"]')).toBeTruthy()
-    expect(screen.getAllByRole("navigation", { name: "Product categories" })[0].querySelector('[data-hover-submenu="grill"]')).toHaveClass("hidden")
+    const desktopNav = screen.getByRole("navigation", { name: "Product categories" })
+    const mobileNav = screen.getByRole("navigation", { name: "Mobile product categories" })
+    expect(desktopNav).toHaveClass("bg-[#f3f3f3]")
+    expect(within(mobileNav).getByRole("link", { name: "Gas Grill" })).toHaveAttribute("href", "/products?category=grill&sub=gas-grill")
+    expect(desktopNav.querySelector('[data-hover-submenu="grill"]')).toBeTruthy()
+    expect(desktopNav.querySelector('[data-hover-submenu="grill"]')).not.toHaveClass("hidden")
   })
 
   test("renders six complete product links and preserves filters in pagination", () => {

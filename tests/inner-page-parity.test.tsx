@@ -28,15 +28,18 @@ describe("legacy inner-page parity", () => {
     expect(about).toContain("about-factory.jpg")
   })
 
-  test("keeps the product catalogue shell off product detail routes", () => {
+  test("keeps the product catalogue shell stable across list pagination without sticky positioning", () => {
     const root = process.cwd()
-    const layout = fs.readFileSync(path.join(root, "app/products/layout.tsx"), "utf8")
-    const listing = fs.readFileSync(path.join(root, "app/products/page.tsx"), "utf8")
+    const rootLayout = fs.readFileSync(path.join(root, "app/products/layout.tsx"), "utf8")
+    const layout = fs.readFileSync(path.join(root, "app/products/(catalog)/layout.tsx"), "utf8")
+    const listing = fs.readFileSync(path.join(root, "app/products/(catalog)/page.tsx"), "utf8")
 
-    expect(layout).not.toContain("ProductDisplayHero")
-    expect(layout).not.toContain("CategoryNav")
-    expect(listing).toContain("ProductDisplayHero")
-    expect(listing).toContain("CategoryNav")
+    expect(layout).toContain("ProductDisplayHero")
+    expect(layout).toContain("CategoryNav")
+    expect(layout).not.toContain("md:sticky")
+    expect(rootLayout).not.toContain("ProductDisplayHero")
+    expect(listing).not.toContain("ProductDisplayHero")
+    expect(listing).not.toContain("CategoryNav")
   })
 
   test("uses the legacy single-column product detail composition", () => {
@@ -51,10 +54,10 @@ describe("legacy inner-page parity", () => {
 
   test("keeps the old product-page quality-service block and news-detail breadcrumb", () => {
     const root = process.cwd()
-    const products = fs.readFileSync(path.join(root, "app/products/page.tsx"), "utf8")
+    const productsLayout = fs.readFileSync(path.join(root, "app/products/(catalog)/layout.tsx"), "utf8")
     const newsDetail = fs.readFileSync(path.join(root, "app/news/[slug]/page.tsx"), "utf8")
 
-    expect(products).toContain("QualityServiceSection")
+    expect(productsLayout).toContain("QualityServiceSection")
     expect(newsDetail).toContain('aria-label="Breadcrumb"')
   })
 })

@@ -32,6 +32,7 @@ export function ProductPagination({
     <nav aria-label="Product pages" className="mt-9 flex items-center justify-center gap-2">
       <Link
         href={buildHref(params, Math.max(1, page - 1))}
+        scroll={false}
         aria-disabled={page === 1}
         aria-label="Previous page"
         className={cn(
@@ -48,6 +49,7 @@ export function ProductPagination({
 
       <Link
         href={buildHref(params, Math.min(totalPages, page + 1))}
+        scroll={false}
         aria-disabled={page === totalPages}
         aria-label="Next page"
         className={cn(

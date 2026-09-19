@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+import { buildLegacyRedirects } from "./lib/legacy-redirects.mjs"
+
 const adminUrl = process.env.NEXT_PUBLIC_ADMIN_URL?.trim().replace(/[\r\n]/g, "").replace(/\/$/, "")
 
 const nextConfig = {
@@ -6,15 +8,7 @@ const nextConfig = {
     unoptimized: true,
   },
   async redirects() {
-    // Legacy route compatibility for the previous site structure.
-    return [
-      { source: "/sy", destination: "/", permanent: true },
-      { source: "/xwzx", destination: "/about", permanent: true },
-      { source: "/skhx", destination: "/products", permanent: true },
-      { source: "/lxwm", destination: "/news", permanent: true },
-      { source: "/gywm", destination: "/faq", permanent: true },
-      { source: "/gywm_05191117_662", destination: "/contact", permanent: true },
-    ]
+    return buildLegacyRedirects()
   },
   async rewrites() {
     if (!adminUrl) return []
