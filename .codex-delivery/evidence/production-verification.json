@@ -1,0 +1,2105 @@
+{
+  "checkedAt": "2026-09-16T11:34:30.334Z",
+  "result": "FAIL",
+  "tenant": {
+    "id": "373be627-6f4f-4058-9147-483dacb60de6",
+    "domain": "baihongsnackmachine.com",
+    "displayName": "徐州百泓厨房设备有限公司",
+    "adminGroup": 2,
+    "supportedLanguages": [
+      "en"
+    ]
+  },
+  "database": {
+    "activeProducts": 278,
+    "articles": 0,
+    "invalidImages": 0,
+    "forbiddenRows": 0
+  },
+  "sitemap": {
+    "status": 200,
+    "urlCount": 284,
+    "failedUrls": [
+      {
+        "url": "https://baihongsnackmachine.com/about",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/news",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/faq",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/contact",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-manual-barbecue-grill-1583100",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-electronic-barbecue-grill-1583102",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-electric-wind-barbecue-grill-1583104",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/75-manual-barbecue-grill-1583105",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/80-electric-wind-barbecue-grill-1583107",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/80-electronic-barbecue-grill-1583108",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-electric-wind-barbecue-grill-1583109",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-electronic-barbecue-grill-1583110",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-manual-barbecue-grill-1583111",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-hand-wind-barbecue-stove-1583112",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-electric-wind-barbecue-grill-1583113",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-electronic-barbecue-grill-1583114",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-manual-barbecue-grill-1583115",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-hand-held-barbecue-grill-1583116",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-electric-wind-barbecue-grill-1583117",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-electronic-barbecue-grill-1583118",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-manual-barbecue-grill-1583119",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-hand-held-barbecue-grill-1583120",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-8-meter-electric-wind-barbecue-grill-1583121",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-8-meter-manual-barbecue-grill-1583122",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-8-meter-hand-held-barbecue-grill-1583123",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-electric-wind-barbecue-grill-1583124",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-electronic-barbecue-grill-1583125",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-manual-barbecue-grill-1583127",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-hand-held-air-oven-1583130",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/2-control-black-diamond-barbecue-stove-1583131",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/3-control-black-diamond-barbecue-stove-1583132",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/4-control-black-diamond-barbecue-stove-1583133",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-1-control-black-diamond-barbecue-stove-1583134",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-2-control-black-diamond-barbecue-stove-1583136",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-3-control-black-diamond-barbecue-stove-1583138",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-4-control-black-diamond-barbecue-stove-1583140",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583142",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583143",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583144",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583145",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583146",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583147",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583148",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583149",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583150",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583151",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583152",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583153",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583154",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583155",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583156",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583157",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583158",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583160",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583162",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583163",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583164",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/70-electric-barbecue-grill-1583165",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-graphene-electric-oven-1583186",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-graphene-electric-oven-1583188",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      }
+    ],
+    "missingCanonical": [
+      {
+        "url": "https://baihongsnackmachine.com/",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/about",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/news",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/faq",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/contact",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-manual-barbecue-grill-1583100",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-electronic-barbecue-grill-1583102",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-electric-wind-barbecue-grill-1583104",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/75-manual-barbecue-grill-1583105",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/80-electric-wind-barbecue-grill-1583107",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/80-electronic-barbecue-grill-1583108",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-electric-wind-barbecue-grill-1583109",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-electronic-barbecue-grill-1583110",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-manual-barbecue-grill-1583111",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/90-hand-wind-barbecue-stove-1583112",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-electric-wind-barbecue-grill-1583113",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-electronic-barbecue-grill-1583114",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-manual-barbecue-grill-1583115",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-1-meter-hand-held-barbecue-grill-1583116",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-electric-wind-barbecue-grill-1583117",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-electronic-barbecue-grill-1583118",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-manual-barbecue-grill-1583119",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-5-meter-hand-held-barbecue-grill-1583120",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-8-meter-electric-wind-barbecue-grill-1583121",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-8-meter-manual-barbecue-grill-1583122",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-8-meter-hand-held-barbecue-grill-1583123",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-electric-wind-barbecue-grill-1583124",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-electronic-barbecue-grill-1583125",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-manual-barbecue-grill-1583127",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-17-meter-hand-held-air-oven-1583130",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/2-control-black-diamond-barbecue-stove-1583131",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/3-control-black-diamond-barbecue-stove-1583132",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/4-control-black-diamond-barbecue-stove-1583133",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-1-control-black-diamond-barbecue-stove-1583134",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-2-control-black-diamond-barbecue-stove-1583136",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-3-control-black-diamond-barbecue-stove-1583138",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-4-control-black-diamond-barbecue-stove-1583140",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583142",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583143",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583144",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583145",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583146",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583147",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583148",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583149",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583150",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583151",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583152",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583153",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583154",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583155",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583156",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583157",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583158",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583160",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583162",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583163",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/black-diamond-barbecue-stove-1583164",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/70-electric-barbecue-grill-1583165",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/80-electric-barbecue-grill-1583166",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1200-electric-barbecue-grill-1583167",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1500-electric-barbecue-grill-1583168",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-2-controlled-black-diamond-barbecue-stove-18-width-1583170",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-2-controlled-black-diamond-barbecue-stove-21-width-1583172",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-three-control-large-string-oven-1583173",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-50-type-electric-barbecue-grill-1583174",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-58-type-electric-barbecue-grill-1583175",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/widening-electric-58-type-electric-barbecue-grill-1583178",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/widening-electric-60-type-electric-barbecue-grill-1583181",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/widening-electric-80-type-electric-barbecue-grill-1583182",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/50-graphene-electric-oven-1583185",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-graphene-electric-oven-1583186",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/50-wind-turbine-graphene-electric-oven-1583187",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-graphene-electric-oven-1583188",
+        "status": 404,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-2-meter-graphene-electric-oven-1583189",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/dual-control-60-electric-wind-barbecue-grill-1583190",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/dual-control-80-electric-wind-barbecue-grill-1583191",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/dual-control-90-electric-wind-barbecue-grill-1583192",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/four-control-1-2-meter-electric-wind-barbecue-grill-1583193",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/four-control-1-5-meter-electric-wind-barbecue-grill-1583195",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/four-control-1-8-meter-electric-wind-barbecue-grill-1583197",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/6-hole-burger-1583198",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/7-hole-burger-1583199",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/12-hole-burger-1583200",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/16-hole-burger-1583201",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/16-hole-wheel-cake-1583202",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/32-hole-wheel-cake-1583203",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-9-hole-hamburger-1583205",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-18-hole-hamburger-1583206",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-27-hole-hamburger-1583207",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-9-hole-hamburger-1583208",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-18-hole-hamburger-1583209",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-27-hole-hamburger-1583210",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/10cm-9-hole-hamburger-1583212",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/10cm-18-hole-hamburger-1583213",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/10cm-27-hole-hamburger-1583215",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-18-hole-1583217",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-18-hole-electronic-ignition-1583219",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-22-hole-1583220",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-22-hole-electronic-ignition-1583221",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-26-hole-1583222",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-26-hole-electronic-ignition-1583223",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-32-hole-staircase-1583225",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-32-hole-step-electronic-ignition-1583226",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-36-hole-1583228",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/round-36-hole-electronic-ignition-1583229",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-6-hole-hamburger-1583231",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-8-cm-9-holes-1583232",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-8-cm-18-hole-1583234",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-8cm-han-intestine-1583235",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-9-cm-9-holes-1583236",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-9-cm-18-holes-1583237",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-9-cm-27-holes-1583238",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-10cm-9-holes-1583239",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-10cm-18-holes-1583240",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-12-hole-1583241",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-16-hole-wheel-cake-1583242",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-32-hole-wheel-cake-1583243",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-circle-with-18-holes-1583244",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-circle-with-22-holes-1583245",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-circle-with-26-holes-1583246",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-circle-with-32-holes-1583247",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8-row-sausage-oven-1583249",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/16-row-sausage-oven-1583250",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/12-row-sausage-oven-1583251",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-board-12-row-sausage-oven-1583252",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-8-row-sausage-oven-1583254",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-16-row-sausage-oven-1583255",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-double-pot-oil-han-1583261",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-oil-man-1583262",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-oily-sausage-1583263",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-oil-double-han-1583264",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-double-pot-oil-han-1583265",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-oil-han-1583267",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-oily-sausage-1583268",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-oil-double-han-1583270",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-pot-double-intestine-1583271",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-pot-oil-sausage-1583272",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/oil-sausage-1583274",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/oil-double-intestine-1583275",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-han-intestine-1583277",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-han-twin-intestines-1583279",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-double-han-intestine-1583280",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/8cm-zhang-han-1583281",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-han-intestine-1583282",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/9cm-double-han-intestine-1583283",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/10cm-han-intestine-1583284",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/10cm-double-sausag-1583286",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-9cm-han-intestine-1583287",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/small-live-shell-bird-egg-1583288",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/small-live-shell-bird-egg-double-row-1583289",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-bird-egg-35-holes-1583291",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/36-hole-octopus-machine-1583292",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/72-hole-octopus-machine-1583293",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-octopus-36-holes-1583294",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-octopus-72-holes-1583295",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-12-frying-pot-1583296",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-16-frying-pot-1583298",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-25-deep-fryer-1583299",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-12-deep-fryer-1583300",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-16-deep-fryer-1583301",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-25-deep-fryer-1583302",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-single-cylinder-deep-fryer-1583303",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-double-cylinder-deep-fry-1583305",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/extended-electric-single-cylinder-deep-fryer-1583306",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583307",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583308",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583309",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583310",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583311",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583312",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583313",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/luxury-deep-fryer-1583314",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/digital-display-deep-fryer-1583315",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/digital-display-deep-fryer-1583316",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/digital-display-deep-fryer-1583317",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/temperature-controlled-deep-fryer-1583318",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/temperature-controlled-deep-fryer-1583319",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/temperature-controlled-deep-fryer-1583320",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/digital-display-temperature-controlled-deep-fryer-1583321",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/digital-display-temperature-controlled-deep-fryer-1583322",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/digital-display-temperature-controlled-deep-fryer-1583324",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/single-pot-deep-fryer-1583325",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/single-pot-deep-fryer-1583327",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/single-pot-deep-fryer-1583328",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/single-pot-deep-fryer-1583329",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/single-pot-deep-fryer-1583331",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-pot-deep-fryer-1583332",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-pot-deep-fryer-1583334",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-pot-deep-fryer-1583335",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/25-deep-fryer-1583339",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/40-deep-fryer-1583340",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60deep-fryer-1583341",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/standard-large-fryer-1583342",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/small-frying-pan-1583343",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-three-small-fryers-1583344",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-double-fryer-1583345",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-small-fryer-1583346",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fierce-fire-30-1583347",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fierce-fire-40-1583348",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fierce-fire-50-1583349",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fierce-fire-50-double-pot-1583350",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fierce-fire-60-1583351",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-pairs-of-pots-with-intense-heat-1583352",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fierce-fire-70-1583353",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/70-pairs-of-pots-with-intense-heat-1583354",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/hot-80-three-pot-1583355",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/hot-80-pot-1583356",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/hot-80-double-pot-1583357",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/manual-flame-40-1583358",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/manual-high-fire-45-1583359",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/manual-flame-80-1583360",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/manual-high-heat-80-pairs-of-pots-1583361",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/standard-double-fryer-1583362",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-big-fryer-1583364",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/new-size-fryer-1583365",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/55-square-meters-1583366",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/72-square-meters-1583367",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/85-square-meters-1583368",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/100square-meters-1583369",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-55-flat-scraper-1583370",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-72-flat-scraper-1583372",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-85-flat-scraper-1583374",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-100-flat-scraper-1583375",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/40-pieces-of-pan-and-pan-combination-1583376",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/56-single-pot-flat-steak-combination-1583377",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/56-double-pot-flat-grill-combination-1583378",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/72-double-pot-flat-grill-combination-1583379",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/72-single-pot-flat-steak-combination-1583380",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/85-single-pot-flat-steak-combination-1583381",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/100-pieces-of-pan-fried-dough-combination-1583382",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electronic-chicken-rolls-machine-1583383",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/manual-chicken-rolls-machine-1583384",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-chicken-rolls-machine-1583385",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/40-aluminum-pan-fried-buns-machine-1583386",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/65-fried-buns-1583387",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/70-fried-buns-1583388",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/80-fried-buns-1583389",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-60-fry-bun-1583390",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-65-fry-bun-1583391",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-70-fry-bun-1583392",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-80-fry-bun-1583393",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/fang-60-multi-purpose-pot-1583394",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-pan-fried-buns-machine-1583395",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/white-40-pan-fried-1583396",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/short-45-fry-1583397",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/dwarf-50-fry-1583398",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/octopus-white-40-rpm-pan-fry-1583399",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/octopus-dwarf-45-fry-1583400",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/octopus-dwarf-50-fry-1583401",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/formula-40-fried-1583402",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/formula-45-fried-1583403",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/formula-50-fried-1583404",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/iron-40-fry-1583405",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/iron-45-fry-1583406",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/iron-50-fry-1583407",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/high-45-fried-1583408",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/50-high-fried-1583409",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/high-60-fried-1583410",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/popcorn-pot-1583411",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/desktop-hand-cranked-popcorn-pot-1583412",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/single-pot-electric-popcorn-machine-with-mixing-function-1583413",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-pot-electric-popcorn-machine-with-upper-mixing-1583414",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/popcorn-and-marshmallow-combination-machine-1583415",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-60-pot-bag-bread-machine-1583416",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-75-pot-bag-bread-machine-1583417",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/60-type-pot-bag-bread-machine-1583418",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/75-type-pot-bag-bread-machine-1583419",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-68-sweet-potato-stove-1583420",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/gas-68-sweet-potato-stove-1583421",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/upper-and-lower-fork-fire-stove-1583422",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/left-and-right-fork-fire-stove-1583423",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-gluten-forming-machine-1583424",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/double-layered-pizza-machine-1583425",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/pizza-machine-1583426",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-flower-cutting-machine-1583427",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/gluten-cutting-machine-1583428",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-40-fry-1583431",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-45-fry-1583432",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/electric-40-aluminum-fry-pack-1583433",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/1-9-meatball-machine-1583434",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/2-2-meatball-machine-1583435",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      },
+      {
+        "url": "https://baihongsnackmachine.com/products/2-5-meatball-machine-1583436",
+        "status": 200,
+        "forbidden": false,
+        "hasCanonical": false
+      }
+    ],
+    "forbiddenUrls": []
+  },
+  "captcha": {
+    "status": 200,
+    "hasSvg": true,
+    "hasToken": true,
+    "containsNaN": false,
+    "exposesAnswer": false
+  }
+}
