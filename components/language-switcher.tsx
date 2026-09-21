@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ChevronDown } from "lucide-react"
 import { localePath } from "@/lib/locale"
@@ -31,9 +30,9 @@ export function LanguageSwitcher({ locale }: { locale: Locale }) {
       {open && (
         <div role="menu" onMouseLeave={() => setOpen(false)} className="absolute right-0 top-full z-[70] min-w-32 bg-black py-1 text-white shadow-xl">
           {languages.map((language) => (
-            <Link key={language.code} role="menuitem" href={localePath(pathname, language.code)} className="block w-full px-4 py-2 text-left text-[15px] font-bold hover:bg-[#f39a00] focus:bg-[#f39a00]">
+            <a key={language.code} role="menuitem" href={localePath(pathname, language.code)} className="block w-full px-4 py-2 text-left text-[15px] font-bold hover:bg-[#f39a00] focus:bg-[#f39a00]">
               {language.label}
-            </Link>
+            </a>
           ))}
         </div>
       )}
