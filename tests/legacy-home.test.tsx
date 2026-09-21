@@ -51,6 +51,8 @@ describe("legacy home sequence", () => {
     expect(screen.getByRole("heading", { name: "Professional services started in 2013" })).toBeVisible()
     expect(screen.getByLabelText("Factory gallery")).toBeVisible()
     expect(container.querySelectorAll('[data-home-hover-submenu].hidden')).not.toHaveLength(0)
+    const categoryNav = screen.getByRole("navigation", { name: "Home product categories" })
+    expect(categoryNav.parentElement).toHaveClass("relative", "z-40")
     expect(screen.getAllByText("2026-05-18")).toHaveLength(4)
   })
 })

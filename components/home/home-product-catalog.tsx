@@ -26,7 +26,7 @@ export function HomeProductCatalog({ categories, products, locale }: { categorie
         </Reveal>
 
         <div className="mt-8 grid gap-7 md:grid-cols-[255px_1fr]">
-          <Reveal as="div" className="border border-neutral-200 bg-[#f3f3f3]">
+          <Reveal as="div" className="relative z-40 border border-neutral-200 bg-[#f3f3f3]">
             <nav aria-label="Home product categories">
               {categories.slice(0, 10).map((category) => (
                 <div key={category.slug} className="group relative">
