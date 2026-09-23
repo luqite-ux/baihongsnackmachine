@@ -1,3 +1,4 @@
+import { cache } from "react"
 import { getSupabaseClient, getTenantId } from "@/lib/supabase"
 import type { LocalizedText, Product, ProductCategory } from "@/lib/types"
 
@@ -71,6 +72,19 @@ export function mapCategoryHierarchy(rows: CategoryRow[]): ProductCategory[] {
 
 type CategoryFilterRow = Pick<CategoryRow, "id" | "parent_id" | "slug" | "extra_data">
 
+const fetchCategoryRows = cache(async (tenantId: string): Promise<CategoryRow[]> => {
+  const db = getSupabaseClient()
+  if (!db) return []
+  const { data, error } = await db
+    .from("product_categories")
+    .select("id,slug,name,name_i18n,description,description_i18n,extra_data,parent_id")
+    .eq("tenant_id", tenantId)
+    .eq("is_active", true)
+    .order("sort_order")
+  if (error) throw new Error(`Unable to load categories: ${error.message}`)
+  return data as CategoryRow[]
+})
+
 export function categoryFilterSlugs(rows: CategoryFilterRow[], category: string, subcategory?: string): string[] {
   const root = rows.find((row) => !row.parent_id && row.slug === category)
   if (!root) return [category]
@@ -132,12 +146,7 @@ export async function fetchProducts(filters: ProductFilters = {}): Promise<Produ
     .eq("tenant_id", tenantId)
     .eq("is_active", true)
   if (filters.category) {
-    const { data: categoryRows, error: categoryError } = await db
-      .from("product_categories")
-      .select("id,parent_id,slug,extra_data")
-      .eq("tenant_id", tenantId)
-      .eq("is_active", true)
-    if (categoryError) throw new Error(`Unable to resolve product category: ${categoryError.message}`)
+    const categoryRows = await fetchCategoryRows(tenantId)
     const slugs = categoryFilterSlugs(categoryRows as CategoryFilterRow[], filters.category, filters.subcategory)
     countQuery = countQuery.in("category_slug", slugs)
     dataQuery = dataQuery.in("category_slug", slugs)
@@ -147,13 +156,19 @@ export async function fetchProducts(filters: ProductFilters = {}): Promise<Produ
     countQuery = countQuery.ilike("name", term)
     dataQuery = dataQuery.ilike("name", term)
   }
-  const { count, error: countError } = await countQuery
+  const requestedFrom = (requestedPage - 1) * pageSize
+  const requestedTo = requestedPage * pageSize - 1
+  const [{ count, error: countError }, requestedData] = await Promise.all([
+    countQuery,
+    dataQuery.order("sort_order").range(requestedFrom, requestedTo),
+  ])
   if (countError) throw new Error(`Unable to count products: ${countError.message}`)
   const total = count || 0
   const totalPages = Math.max(1, Math.ceil(total / pageSize))
   const page = Math.min(requestedPage, totalPages)
-  const from = (page - 1) * pageSize
-  const { data, error } = await dataQuery.order("sort_order").range(from, from + pageSize - 1)
+  const { data, error } = page === requestedPage
+    ? requestedData
+    : await dataQuery.order("sort_order").range((page - 1) * pageSize, page * pageSize - 1)
   if (error) throw new Error(`Unable to load products: ${error.message}`)
   return { items: (data as ProductRow[]).map(mapProduct), page, pageSize, total, totalPages }
 }
@@ -179,15 +194,7 @@ export async function fetchRelatedProducts(product: Product, limit = 4): Promise
 }
 
 export async function fetchCategories(): Promise<ProductCategory[]> {
-  const db = getSupabaseClient()
   const tenantId = getTenantId()
-  if (!db || !tenantId) return []
-  const { data, error } = await db
-    .from("product_categories")
-    .select("id,slug,name,name_i18n,description,description_i18n,extra_data,parent_id")
-    .eq("tenant_id", tenantId)
-    .eq("is_active", true)
-    .order("sort_order")
-  if (error) throw new Error(`Unable to load categories: ${error.message}`)
-  return mapCategoryHierarchy(data as CategoryRow[])
+  if (!tenantId) return []
+  return mapCategoryHierarchy(await fetchCategoryRows(tenantId))
 }

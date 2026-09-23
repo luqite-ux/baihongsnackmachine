@@ -13,6 +13,18 @@ function buildHref(params: Record<string, string | undefined>, page: number) {
   return query ? `/products?${query}` : "/products"
 }
 
+function pageItems(page: number, totalPages: number) {
+  const pages = new Set([1, totalPages])
+  for (let item = page - 1; item <= page + 1; item += 1) {
+    if (item >= 1 && item <= totalPages) pages.add(item)
+  }
+  const sorted = [...pages].sort((a, b) => a - b)
+  return sorted.flatMap((item, index) => {
+    const previous = sorted[index - 1]
+    return previous && item - previous > 1 ? (["ellipsis", item] as const) : ([item] as const)
+  })
+}
+
 export function ProductPagination({
   page,
   totalPages,
@@ -33,7 +45,7 @@ export function ProductPagination({
   const params = { category, sub, search }
 
   return (
-    <nav aria-label="Product pages" className="mt-9 flex items-center justify-center gap-2">
+    <nav aria-label="Product pages" className="mt-9 flex flex-wrap items-center justify-center gap-2">
       <Link
         href={localePath(buildHref(params, Math.max(1, page - 1)), locale)}
         scroll={false}
@@ -47,9 +59,26 @@ export function ProductPagination({
         {locale === "zh" ? "上一页" : "Prev"}
       </Link>
 
-      <span aria-current="page" className="flex h-9 min-w-9 items-center justify-center border border-[#f39a00] bg-[#f39a00] px-3 text-sm font-bold text-white">
-        {page}
-      </span>
+      {pageItems(page, totalPages).map((item, index) =>
+        item === "ellipsis" ? (
+          <span key={`ellipsis-${index}`} className="flex h-9 min-w-9 items-center justify-center px-2 text-sm text-neutral-400" aria-hidden="true">
+            ...
+          </span>
+        ) : item === page ? (
+          <span key={item} aria-current="page" className="flex h-9 min-w-9 items-center justify-center border border-[#f39a00] bg-[#f39a00] px-3 text-sm font-bold text-white">
+            {item}
+          </span>
+        ) : (
+          <Link
+            key={item}
+            href={localePath(buildHref(params, item), locale)}
+            aria-label={locale === "zh" ? `第 ${item} 页` : `Page ${item}`}
+            className="flex h-9 min-w-9 items-center justify-center border border-neutral-200 px-3 text-sm font-semibold text-neutral-600 transition-colors hover:border-[#f39a00] hover:bg-[#f39a00] hover:text-white"
+          >
+            {item}
+          </Link>
+        ),
+      )}
 
       <Link
         href={localePath(buildHref(params, Math.min(totalPages, page + 1)), locale)}

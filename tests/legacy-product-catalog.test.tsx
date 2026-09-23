@@ -77,4 +77,14 @@ describe("legacy product catalogue", () => {
       "/products?category=grill&sub=gas-grill&page=3",
     )
   })
+
+  test("shows direct page numbers so visitors can understand the catalogue range", () => {
+    render(<ProductCatalog data={{ ...data, page: 4, total: 42, totalPages: 7 }} category="grill" sub="gas-grill" />)
+    const pages = screen.getByRole("navigation", { name: "Product pages" })
+
+    expect(within(pages).getByRole("link", { name: "Page 1" })).toHaveAttribute("href", "/products?category=grill&sub=gas-grill")
+    expect(within(pages).getByText("4")).toHaveAttribute("aria-current", "page")
+    expect(within(pages).getByRole("link", { name: "Page 7" })).toHaveAttribute("href", "/products?category=grill&sub=gas-grill&page=7")
+    expect(within(pages).getAllByText("...")).toHaveLength(2)
+  })
 })
