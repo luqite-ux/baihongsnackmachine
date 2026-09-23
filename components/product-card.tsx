@@ -13,9 +13,9 @@ export function ProductCard({ product, bareListItem = false, locale = "en" }: { 
     <div className="group h-full">
       <Link
         href={localePath(`/products/${product.slug}`, locale)}
-        className="block h-full overflow-hidden border border-neutral-200 bg-white transition-colors hover:border-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f39a00]"
+        className="flex h-full flex-col overflow-hidden border border-neutral-200 bg-white transition-colors hover:border-[#f39a00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f39a00]"
       >
-        <div className="relative flex aspect-[4/3] items-center justify-center bg-white p-4">
+        <div className="relative flex aspect-[4/3] shrink-0 items-center justify-center bg-white p-4">
           <Image
             src={product.image.src || "/placeholder.svg"}
             alt={resolveText(product.image.alt, locale) || name}
@@ -25,7 +25,7 @@ export function ProductCard({ product, bareListItem = false, locale = "en" }: { 
             className="object-contain p-4 transition-transform duration-300 ease-out group-hover:scale-[1.025]"
           />
         </div>
-        <div className="border-t border-neutral-200 bg-[#f3f3f3] px-4 py-3 text-center transition-colors group-hover:bg-[#f39a00] group-hover:text-white">
+        <div data-product-card-copy className="mt-auto flex min-h-[130px] flex-col justify-center border-t border-neutral-200 bg-[#f3f3f3] px-4 py-3 text-center transition-colors group-hover:bg-[#f39a00] group-hover:text-white">
           <h3 className="line-clamp-2 text-sm font-bold">{name}</h3>
           <p className="mt-1 text-xs text-neutral-500 group-hover:text-white/85">{categoryName}</p>
           {product.summary && (

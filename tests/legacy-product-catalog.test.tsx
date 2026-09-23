@@ -65,6 +65,8 @@ describe("legacy product catalogue", () => {
 
     const grid = screen.getByRole("list", { name: "Products" })
     expect(within(grid).getAllByRole("listitem")).toHaveLength(6)
+    expect(within(grid).getAllByRole("link").every((link) => link.className.includes("flex-col"))).toBe(true)
+    expect(grid.querySelectorAll('[data-product-card-copy].min-h-\\[130px\\]')).toHaveLength(6)
     const productImages = within(grid).getAllByRole("img")
     expect(productImages).toHaveLength(6)
     expect(productImages.every((image) => image.getAttribute("loading") === "eager")).toBe(true)
