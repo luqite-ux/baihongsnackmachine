@@ -67,6 +67,10 @@ export default async function RootLayout({
           <SiteFooter locale={locale} />
         </div>
         {process.env.NODE_ENV === "production" && <Analytics />}
+        <script
+          async
+          src={`https://admin.globle-trade.com/api/public/analytics.js?tenantId=${encodeURIComponent(process.env.NEXT_PUBLIC_TENANT_ID || "373be627-6f4f-4058-9147-483dacb60de6")}`}
+        />
       </body>
     </html>
   )
